@@ -77,14 +77,6 @@ set expandtab
 
 
 
-" Turn on line numbering
-set number
-
-" Toggle relative and absolute numbering
-nnoremap <C-S-n> :set relativenumber!<cr>
-
-
-
 " Paste from system clipboard
 nnoremap <leader>p "*p
 
@@ -185,6 +177,44 @@ set foldtext=MyFoldText()
 " Use space to toggle folds
 nnoremap <Space> za
 vnoremap <Space> za
+
+
+
+" ====================================================================== }}}
+" Fonts and colors ===================================================== {{{
+
+
+
+" Highlight current line
+set cursorline
+
+" Turn on line numbering
+set number
+
+" Toggle relative and absolute numbering
+nnoremap <C-S-n> :set relativenumber!<cr>
+
+
+
+if has("gui_running")
+
+  " Hide the toolbar
+  set guioptions-=T
+
+  " Set font
+  set guifont=IBM\ Plex\ Mono:h14
+
+  " Increase leading
+  set linespace=2
+
+  " Enable syntax coloring
+  syntax enable
+
+  " Set the colorscheme
+  " colorscheme solarized
+  " set background=dark
+
+endif
 
 
 
