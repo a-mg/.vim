@@ -52,6 +52,49 @@ let maplocalleader = "\\"
 
 
 " ====================================================================== }}}
+" Text editing ========================================================= {{{
+
+
+
+" Text encoding
+set encoding=utf-8
+
+
+
+" Enable indentation
+filetype indent on
+
+" Use automatic indentation
+set autoindent
+set smartindent
+set smarttab
+
+" Tabs are two spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+
+
+" Turn on line numbering
+set number
+
+" Toggle relative and absolute numbering
+nnoremap <C-S-n> :set relativenumber!<cr>
+
+
+
+" Paste from system clipboard
+nnoremap <leader>p "*p
+
+" Yank to system clipboard
+nnoremap <leader>y "*y
+vnoremap <leader>y "*y
+
+
+
+" ====================================================================== }}}
 " Searching and motion ================================================= {{{
 
 
