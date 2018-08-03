@@ -1,18 +1,22 @@
 " vimrc ================================================================ {{{
-" 
+"
+"
+"
 " Author: A. Mattson Gallagher <ndrwg@me.com>
 " Source: https://github.com/ndrwg/dotvim
-" 
+"
 " This file contains settings and configuration for the vim editor.
 " Only core settings and mappings are included here; any settings
 " related to plugins or languages live in other files.
 "
 " Currently (2018-08-03) using MacVim.
-" 
+"
 " Thanks to:
 " Steve Losh (https://bitbucket.org/sjl/dotfiles/src/default/vim/vimrc)
 " Emily St (https://github.com/emilyst/home/blob/master/.vimrc)
-" 
+"
+"
+"
 " ====================================================================== }}}
 " Preamble ============================================================= {{{
 
@@ -201,7 +205,6 @@ function! MyFoldText()
   return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
 endfunction
 set foldtext=MyFoldText()
-
 
 
 
