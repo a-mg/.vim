@@ -12,6 +12,8 @@ if exists("g:loaded_pathogen")
   execute pathogen#helptags()
 endif
 
+
+
 " Move undo files to vim directory
 set undodir=~/.vim/local/undo//
 
@@ -31,6 +33,14 @@ augroup RememberLastView
   au BufWinLeave * silent! mkview
   au BufWinEnter * silent! loadview
 augroup end
+
+
+
+" Show partial commands while typing
+set showcmd
+
+" Hide the current mode (used for status line replacement)
+set noshowmode
 
 
 
