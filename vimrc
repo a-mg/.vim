@@ -236,7 +236,7 @@ if has("gui_running")
   set guifont=IBM\ Plex\ Mono:h14
 
   " Increase leading
-  set linespace=2
+  set linespace=4
 
   " Enable syntax coloring
   syntax enable
