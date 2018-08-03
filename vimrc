@@ -120,6 +120,14 @@ nnoremap g0 0
 
 
 
+" Move lines using leader-j,k
+nnoremap <leader>j :m+<cr>==
+nnoremap <leader>k :m-2<cr>==
+vnoremap <leader>j :m'>+<cr>gv=gv
+vnoremap <leader>k :m-2<cr>gv=gv
+
+
+
 " Search case
 set ignorecase
 set smartcase
