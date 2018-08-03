@@ -242,8 +242,8 @@ if has("gui_running")
   syntax enable
 
   " Set the colorscheme
-  " colorscheme solarized
-  " set background=dark
+  colorscheme base16-ocean
+  set background=dark
 
 endif
 
