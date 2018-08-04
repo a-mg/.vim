@@ -268,6 +268,7 @@ set cursorline
 
 " Turn on line numbering
 set number
+set numberwidth=6
 
 " Toggle relative and absolute numbering
 nnoremap <c-s-n> :set relativenumber!<cr>
