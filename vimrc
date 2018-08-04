@@ -9,8 +9,6 @@
 " Only core settings and mappings are included here; any settings
 " related to plugins or languages live in other files.
 "
-" Currently (2018-08-03) using MacVim.
-"
 " Thanks to:
 " Steve Losh (https://bitbucket.org/sjl/dotfiles/src/default/vim/vimrc)
 " Emily St (https://github.com/emilyst/home/blob/master/.vimrc)
