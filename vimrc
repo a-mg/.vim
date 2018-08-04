@@ -189,7 +189,7 @@ set foldlevelstart=99
 set foldlevel=99
 
 " Folding method
-set foldmethod=marker
+set foldmethod=syntax
 
 " Folding function
 function! MyFoldText()
@@ -269,3 +269,4 @@ autocmd BufWritePost vimrc mkview | source % | loadview
 
 
 " ====================================================================== }}}
+" vim: set fdm=marker :
