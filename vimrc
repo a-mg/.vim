@@ -120,13 +120,10 @@ set expandtab
 
 " Paste from system clipboard
 nnoremap <leader>p "*p
-inoremap <c-v> <esc>"*pa
 
 " Yank to system clipboard
 nnoremap <leader>y "*y
 vnoremap <leader>y "*y
-nnoremap <c-c> "*y
-vnoremap <c-c> "*y
 
 
 
