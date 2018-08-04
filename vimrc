@@ -285,6 +285,9 @@ if has("gui_running")
   " Hide the toolbar
   set guioptions-=T
 
+  " Hide the left scrollbar
+  set guioptions=r
+
   " Set font
   set guifont=IBM\ Plex\ Mono:h14
 
