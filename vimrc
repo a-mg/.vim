@@ -90,9 +90,6 @@ inoremap <S-Space> <esc>
 let mapleader = ","
 let maplocalleader = "\\"
 
-" Quickly open help files in right vsplit
-nnoremap <C-h> :vert bo help 
-
 
 
 " ====================================================================== }}}
@@ -201,6 +198,22 @@ nnoremap <leader><space> :noh<cr>
 
 " Highlight matching braces
 " set showmatch
+
+
+
+" ====================================================================== }}}
+" Split management ===================================================== {{{
+
+
+
+" Move between splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Quickly open help files in right vsplit
+nnoremap <C-a> :vert bo help 
 
 
 
