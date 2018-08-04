@@ -158,6 +158,12 @@ vnoremap <leader>k :m-2<cr>gv=gv
 
 
 
+" Use tab to jump between matching braces
+nnoremap <tab> %
+vnoremap <tab> %
+
+
+
 " Search case
 set ignorecase
 set smartcase
@@ -171,8 +177,21 @@ set incsearch
 " Default to global replace
 set gdefault
 
+" Use better regular expressions
+nnoremap / /\v
+vnoremap / /\v
+
+" Keep matches in the middle of the screen
+" nnoremap n nzzzv
+" nnoremap N Nzzzv
+
 " Clear search higlights
 nnoremap <leader><space> :noh<cr>
+
+
+
+" Highlight matching braces
+" set showmatch
 
 
 
