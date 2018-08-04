@@ -26,7 +26,7 @@
 set nocompatible
 
 " Setup Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+runtime bundle/pathogen/autoload/pathogen.vim
 if exists("g:loaded_pathogen")
   execute pathogen#infect()
   execute pathogen#helptags()
