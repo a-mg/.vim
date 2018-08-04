@@ -212,6 +212,11 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
+" Close a split/buffer more naturally
+nnoremap <c-w> :q<cr>
+
+
+
 " Quickly open help files in right vsplit
 nnoremap <c-a> :vert bo help 
 
