@@ -89,6 +89,9 @@ inoremap <S-Space> <esc>
 let mapleader = ","
 let maplocalleader = "\\"
 
+" Quickly open help files in right vsplit
+nnoremap <C-h> :vert bo help 
+
 
 
 " ====================================================================== }}}
