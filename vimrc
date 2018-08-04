@@ -53,11 +53,12 @@ set directory=~/.vim/local/swap//
 " View files
 " Makes vim save state: folds, cursor, etc.
 set viewdir=~/.vim/local/view//
-" augroup RememberLastView
-"   au!
-"   au BufWinLeave * silent! mkview
-"   au BufWinEnter * silent! loadview
-" augroup end
+set viewoptions=folds,cursor
+augroup RememberLastView
+  au!
+  au BufWinLeave * silent! mkview
+  au BufWinEnter * silent! loadview
+augroup end
 
 
 
@@ -291,10 +292,10 @@ endif
 nnoremap <leader>rc :e ~/.vim/vimrc<cr>
 
 " Reload vimrc on save
-" autocmd BufWritePost vimrc mkview | source % | loadview
-autocmd BufWritePost vimrc source %
+autocmd BufWritePost vimrc mkview | source % | loadview
+" autocmd BufWritePost vimrc source %
 
 
 
 " ====================================================================== }}}
-" vim: set fdm=marker fdl=0 :
+" vim: set fdm=marker :
