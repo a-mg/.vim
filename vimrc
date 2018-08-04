@@ -118,6 +118,14 @@ set expandtab
 
 
 
+" Wrap text in breaks (do not split words)
+set wrap linebreak
+
+" Default to not wrap text (for code)
+set nowrap
+
+
+
 " Paste from system clipboard
 nnoremap <leader>p "*p
 
