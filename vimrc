@@ -9,6 +9,11 @@
 " Only core settings and mappings are included here; any settings
 " related to plugins or languages live in other files.
 "
+" The settings are grouped into sections based on which aspects of
+" the editor they modify. All settings should be commented. Commands
+" should mostly follow this rule: leader commands affect text, and
+" chord commands affect the editor/windows.
+"
 " References and reading:
 " Steve Losh  (https://bitbucket.org/sjl/dotfiles
 "              http://stevelosh.com/blog/2010/09/coming-home-to-vim/)
