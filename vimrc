@@ -34,6 +34,11 @@ endif
 
 
 
+" Enable filetype plugins
+filetype plugin on
+
+
+
 " Move undo files to vim directory
 set undodir=~/.vim/local/undo//
 
