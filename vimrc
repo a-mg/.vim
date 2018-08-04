@@ -9,9 +9,10 @@
 " Only core settings and mappings are included here; any settings
 " related to plugins or languages live in other files.
 "
-" Thanks to:
-" Steve Losh (https://bitbucket.org/sjl/dotfiles/src/default/vim/vimrc)
-" Emily St (https://github.com/emilyst/home/blob/master/.vimrc)
+" References and reading:
+" Steve Losh  (https://bitbucket.org/sjl/dotfiles
+"              http://stevelosh.com/blog/2010/09/coming-home-to-vim/)
+" Emily St    (https://github.com/emilyst/home)
 "
 "
 "
