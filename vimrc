@@ -233,6 +233,8 @@ nnoremap <c-a> :vert bo help
 
 
 " Make window narrow for editing prose/markdown
+" (Can't use alt/meta as a modifier on OS X, since it sends a
+" special character instead, so use that character instead.)
 nnoremap “ :set columns=90<cr>
 
 " Restore full width window
