@@ -84,7 +84,7 @@ set visualbell
 nnoremap ; :
 
 " Exit insert mode with shift-space
-inoremap <S-Space> <esc>
+inoremap <s-space> <esc>
 
 " Leaders
 let mapleader = ","
@@ -120,18 +120,18 @@ set expandtab
 
 " Paste from system clipboard
 nnoremap <leader>p "*p
-inoremap <C-v> <esc>"*pa
+inoremap <c-v> <esc>"*pa
 
 " Yank to system clipboard
 nnoremap <leader>y "*y
 vnoremap <leader>y "*y
-nnoremap <C-c> "*y
-vnoremap <C-c> "*y
+nnoremap <c-c> "*y
+vnoremap <c-c> "*y
 
 
 
 " Close HTML tag
-inoremap <C-D-.> </<C-X><C-o>
+inoremap <c-D-.> </<c-x><c-o>
 
 
 
@@ -207,13 +207,13 @@ nnoremap <leader><space> :noh<cr>
 
 
 " Move between splits
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
 " Quickly open help files in right vsplit
-nnoremap <C-a> :vert bo help 
+nnoremap <c-a> :vert bo help 
 
 
 
@@ -253,8 +253,8 @@ set foldtext=MyFoldText()
 
 
 " Use space to toggle folds
-nnoremap <Space> za
-vnoremap <Space> za
+nnoremap <space> za
+vnoremap <space> za
 
 
 
@@ -270,7 +270,7 @@ set cursorline
 set number
 
 " Toggle relative and absolute numbering
-nnoremap <C-S-n> :set relativenumber!<cr>
+nnoremap <c-s-n> :set relativenumber!<cr>
 
 
 
