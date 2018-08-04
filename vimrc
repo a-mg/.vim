@@ -227,6 +227,14 @@ nnoremap <c-a> :vert bo help
 
 
 
+" Make window narrow for editing prose/markdown
+nnoremap “ :set columns=90<cr>
+
+" Restore full width window
+nnoremap ‘ :set columns=1000<cr>
+
+
+
 " ====================================================================== }}}
 " Folding ============================================================== {{{
 
