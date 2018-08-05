@@ -222,6 +222,12 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
+" Open new empty splits in the specified direction
+nnoremap <c-s-h> :leftabove vnew<cr>
+nnoremap <c-s-j> :rightbelow new<cr>
+nnoremap <c-s-k> :leftabove new<cr>
+nnoremap <c-s-l> :rightbelow vnew<cr>
+
 " Close a split/buffer more naturally
 nnoremap <c-w> :q<cr>
 
