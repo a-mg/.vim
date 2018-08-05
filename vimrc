@@ -141,7 +141,7 @@ vnoremap <leader>y "*y
 
 
 " Close HTML tag
-inoremap <c-D-.> </<c-x><c-o>
+inoremap <c-d-.> </<c-x><c-o>
 
 
 
