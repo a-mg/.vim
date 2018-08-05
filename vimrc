@@ -222,6 +222,12 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
+" Add the same directions for the terminal
+tnoremap <c-h> <c-w>h
+tnoremap <c-j> <c-w>j
+tnoremap <c-k> <c-w>k
+tnoremap <c-l> <c-w>l
+
 " Open new empty splits in the specified direction
 nnoremap <s-h> :leftabove vnew<cr>
 nnoremap <s-j> :rightbelow new<cr>
@@ -229,7 +235,7 @@ nnoremap <s-k> :leftabove new<cr>
 nnoremap <s-l> :rightbelow vnew<cr>
 
 " Close a split/buffer more naturally
-nnoremap <c-w> :q<cr>
+nnoremap <c-q> :q<cr>
 
 
 
