@@ -100,6 +100,9 @@ set viewoptions=folds,cursor
 "   au BufWinEnter * silent! loadview
 " augroup end
 
+" viminfo file
+set viminfo+=n~/.vim/local/info/viminfo
+
 
 " ====================================================================== }}}
 " Editing vimrc ======================================================== {{{
