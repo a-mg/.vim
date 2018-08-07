@@ -22,7 +22,6 @@
 " FOUNDATION ###########################################################
 " Preamble ============================================================= {{{
 
-
 " Remove vi compatibility
 set nocompatible
 
@@ -31,20 +30,15 @@ set encoding=utf-8
 
 " Show partial commands while typing
 set showcmd
-
 " Hide the current mode (used for status line replacement)
 set noshowmode
-
 " Don't beep constantly
 set visualbell
-
 " Disable the intro message
 set shortmess+=I
 
-
 " ====================================================================== }}}
 " Plugin system ======================================================== {{{
-
 
 " Setup Pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
@@ -56,10 +50,8 @@ endif
 " Enable filetype plugins
 filetype plugin on
 
-
 " ====================================================================== }}}
 " Basic keybindings ==================================================== {{{
-
 
 " Use semicolon for commands
 nnoremap ; :
@@ -74,10 +66,8 @@ let maplocalleader = "\\"
 " More intuitive redo command
 nnoremap U <c-r>
 
-
 " ====================================================================== }}}
 " Local files ========================================================== {{{
-
 
 " Move undo files to vim directory
 set undodir=~/.vim/local/undo//
@@ -103,10 +93,8 @@ set viewoptions=folds,cursor
 " viminfo file
 set viminfo+=n~/.vim/local/info/viminfo
 
-
 " ====================================================================== }}}
 " Editing vimrc ======================================================== {{{
-
 
 " Quickly open vimrc
 nnoremap <leader>rc :e ~/.vim/vimrc<cr>
@@ -119,12 +107,11 @@ augroup EditingVimrc
   au BufWinEnter  vimrc silent! loadview
 augroup end
 
-
 " ====================================================================== }}}
+" ######################################################################
 
 " VIEWING AND NAVIGATING TEXT ##########################################
 " Motion (within text) ================================================= {{{
-
 
 " Move by screen lines, not file lines
 nnoremap j gj
@@ -144,10 +131,8 @@ nnoremap g0 0
 nnoremap <tab> %
 vnoremap <tab> %
 
-
 " ====================================================================== }}}
 " Searching ============================================================ {{{
-
 
 " Search case
 set ignorecase
@@ -176,10 +161,8 @@ nnoremap <leader><space> :noh<cr>
 " Highlight matching braces
 " set showmatch
 
-
 " ====================================================================== }}}
 " Folding ============================================================== {{{
-
 
 " Enable code folding
 set foldenable
@@ -213,12 +196,11 @@ set foldtext=MyFoldText()
 nnoremap <space> za
 vnoremap <space> za
 
-
 " ====================================================================== }}}
+" ######################################################################
 
 " EDITING TEXT #########################################################
 " Indentation ========================================================== {{{
-
 
 " Enable indentation
 filetype indent on
@@ -238,10 +220,8 @@ set expandtab
 vnoremap < <gv
 vnoremap > >gv
 
-
 " ====================================================================== }}}
 " Moving text ========================================================== {{{
-
 
 " Move lines using leader-j,k
 nnoremap <leader>j :m+<cr>==
@@ -249,10 +229,8 @@ nnoremap <leader>k :m-2<cr>==
 vnoremap <leader>j :m'>+<cr>gv=gv
 vnoremap <leader>k :m-2<cr>gv=gv
 
-
 " ====================================================================== }}}
 " Yanking and pasting ================================================== {{{
-
 
 " Paste from system clipboard
 nnoremap <leader>p "*p
@@ -264,10 +242,8 @@ vnoremap <leader>y "*y
 " Reselect pasted text
 nnoremap <leader>v V`]
 
-
 " ====================================================================== }}}
 " Wrapping ============================================================= {{{
-
 
 " Wrap text in breaks (do not split words)
 set wrap linebreak
@@ -293,21 +269,17 @@ function! ToggleColorColumn()
 endfunction
 nnoremap <c-q> :call ToggleColorColumn()<cr>
 
-
-
 " ====================================================================== }}}
 " Code completion ====================================================== {{{
-
 
 " Close HTML tag
 inoremap <c-d-.> </<c-x><c-o>
 
-
 " ====================================================================== }}}
+" ######################################################################
 
 " GRAPHICAL VIM ########################################################
 " Fonts and colors ===================================================== {{{
-
 
 " Highlight current line
 set cursorline
@@ -320,7 +292,6 @@ set numberwidth=6
 nnoremap <c-n> :set relativenumber!<cr>
 
 if has("gui_running")
-
   " Hide the toolbar
   set guioptions-=T
   " Hide the left scrollbar
@@ -336,13 +307,10 @@ if has("gui_running")
   " Set the colorscheme
   colorscheme base16-ocean
   set background=dark
-
 endif
-
 
 " ====================================================================== }}}
 " Split window management ============================================== {{{
-
 
 " Move between splits
 nnoremap <c-h> <c-w>h
@@ -373,7 +341,7 @@ nnoremap “ :set columns=90<cr>
 " Restore full width window
 nnoremap ‘ :set columns=1000<cr>
 
-
 " ====================================================================== }}}
+" ######################################################################
 
 " vim: set fdm=marker :
