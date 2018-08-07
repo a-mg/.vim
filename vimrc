@@ -74,9 +74,6 @@ let maplocalleader = "\\"
 " More intuitive redo command
 nnoremap U <c-r>
 
-" Close HTML tag
-inoremap <c-d-.> </<c-x><c-o>
-
 
 " ====================================================================== }}}
 " Local files ========================================================== {{{
@@ -292,6 +289,14 @@ function! ToggleColorColumn()
   end
 endfunction
 nnoremap <leader>cc :call ToggleColorColumn()<cr>
+
+
+" ====================================================================== }}}
+" Code completion ====================================================== {{{
+
+
+" Close HTML tag
+inoremap <c-d-.> </<c-x><c-o>
 
 
 " ====================================================================== }}}
