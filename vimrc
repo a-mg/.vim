@@ -57,7 +57,8 @@ filetype plugin on
 nnoremap ; :
 
 " Exit insert mode with shift-space
-noremap <s-space> <esc>
+inoremap <s-space> <esc>
+noremap  <s-space> <esc>
 
 " Leaders
 let mapleader = ","
