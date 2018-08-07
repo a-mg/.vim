@@ -281,7 +281,7 @@ nnoremap Q gqip
 vnoremap Q gq
 
 " Wrap an entire file
-nnoremap <leader>q gggqG
+nnoremap <leader>q mqgggqG`q
 
 " Toggle an indicator of the wrapping column
 function! ToggleColorColumn()
