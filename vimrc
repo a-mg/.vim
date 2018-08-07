@@ -1,7 +1,5 @@
 " vimrc ================================================================ {{{
 "
-"
-"
 " Author: A. Mattson Gallagher <ndrwg@me.com>
 " Source: https://github.com/ndrwg/dotvim
 "
@@ -19,15 +17,34 @@
 "              http://stevelosh.com/blog/2010/09/coming-home-to-vim/)
 " Emily St    (https://github.com/emilyst/home)
 "
-"
-"
 " ====================================================================== }}}
-" Preamble ============================================================= {{{
 
+" FOUNDATION ###########################################################
+" Preamble ============================================================= {{{
 
 
 " Remove vi compatibility
 set nocompatible
+
+" Text encoding
+set encoding=utf-8
+
+" Show partial commands while typing
+set showcmd
+
+" Hide the current mode (used for status line replacement)
+set noshowmode
+
+" Don't beep constantly
+set visualbell
+
+" Disable the intro message
+set shortmess+=I
+
+
+" ====================================================================== }}}
+" Plugin system ======================================================== {{{
+
 
 " Setup Pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
@@ -36,11 +53,33 @@ if exists("g:loaded_pathogen")
   execute pathogen#helptags()
 endif
 
-
-
 " Enable filetype plugins
 filetype plugin on
 
+
+" ====================================================================== }}}
+" Basic keybindings ==================================================== {{{
+
+
+" Use semicolon for commands
+nnoremap ; :
+
+" Exit insert mode with shift-space
+inoremap <s-space> <esc>
+
+" Leaders
+let mapleader = ","
+let maplocalleader = "\\"
+
+" More intuitive redo command
+nnoremap U <c-r>
+
+" Close HTML tag
+inoremap <c-d-.> </<c-x><c-o>
+
+
+" ====================================================================== }}}
+" Local files ========================================================== {{{
 
 
 " Move undo files to vim directory
@@ -65,103 +104,26 @@ set viewoptions=folds,cursor
 " augroup end
 
 
+" ====================================================================== }}}
+" Editing vimrc ======================================================== {{{
 
-" Show partial commands while typing
-set showcmd
 
-" Hide the current mode (used for status line replacement)
-set noshowmode
+" Quickly open vimrc
+nnoremap <leader>rc :e ~/.vim/vimrc<cr>
 
-" Don't beep constantly
-set visualbell
-
-" Disable the intro message
-set shortmess+=I
-
+" Reload vimrc on save
+augroup EditingVimrc
+  au!
+  au BufWritePost vimrc mkview | source % | loadview
+  au BufWinLeave  vimrc silent! mkview
+  au BufWinEnter  vimrc silent! loadview
+augroup end
 
 
 " ====================================================================== }}}
-" Basic keybindings ==================================================== {{{
 
-
-
-" Use semicolon for commands
-nnoremap ; :
-
-" Exit insert mode with shift-space
-inoremap <s-space> <esc>
-
-" Leaders
-let mapleader = ","
-let maplocalleader = "\\"
-
-
-
-" ====================================================================== }}}
-" Text editing ========================================================= {{{
-
-
-
-" Text encoding
-set encoding=utf-8
-
-
-
-" Enable indentation
-filetype indent on
-
-" Use automatic indentation
-set autoindent
-set smartindent
-set smarttab
-
-" Tabs are two spaces
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-
-
-
-" Wrap text in breaks (do not split words)
-set wrap linebreak
-
-" Default to not wrap text (for code)
-set nowrap
-
-
-
-" Paste from system clipboard
-nnoremap <leader>p "*p
-
-" Yank to system clipboard
-nnoremap <leader>y "*y
-vnoremap <leader>y "*y
-
-" Reselect pasted text
-nnoremap <leader>v V`]
-
-
-
-" Close HTML tag
-inoremap <c-d-.> </<c-x><c-o>
-
-
-
-" Maintain selection when indenting
-vnoremap < <gv
-vnoremap > >gv
-
-
-
-" More intuitive redo command
-nnoremap U <c-r>
-
-
-
-" ====================================================================== }}}
-" Searching and motion ================================================= {{{
-
+" VIEWING AND NAVIGATING TEXT ##########################################
+" Motion (within text) ================================================= {{{
 
 
 " Move by screen lines, not file lines
@@ -178,20 +140,13 @@ nnoremap g^ ^
 nnoremap g$ $
 nnoremap g0 0
 
-
-
-" Move lines using leader-j,k
-nnoremap <leader>j :m+<cr>==
-nnoremap <leader>k :m-2<cr>==
-vnoremap <leader>j :m'>+<cr>gv=gv
-vnoremap <leader>k :m-2<cr>gv=gv
-
-
-
 " Use tab to jump between matching braces
 nnoremap <tab> %
 vnoremap <tab> %
 
+
+" ====================================================================== }}}
+" Searching ============================================================ {{{
 
 
 " Search case
@@ -218,59 +173,12 @@ vnoremap / /\v
 " Clear search higlights
 nnoremap <leader><space> :noh<cr>
 
-
-
 " Highlight matching braces
 " set showmatch
 
 
-
-" ====================================================================== }}}
-" Split management ===================================================== {{{
-
-
-
-" Move between splits
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
-
-" Add the same directions for the terminal
-tnoremap <c-h> <c-w>h
-tnoremap <c-j> <c-w>j
-tnoremap <c-k> <c-w>k
-tnoremap <c-l> <c-w>l
-
-" Open new empty splits in the specified direction
-nnoremap <s-h> :leftabove vnew<cr>
-nnoremap <s-j> :rightbelow new<cr>
-nnoremap <s-k> :leftabove new<cr>
-nnoremap <s-l> :rightbelow vnew<cr>
-
-" Close a split/buffer more naturally
-nnoremap <c-q> :q<cr>
-
-
-
-" Quickly open help files in right vsplit
-nnoremap <c-a> :vert bo help 
-
-
-
-" Make window narrow for editing prose/markdown
-" (Can't use alt/meta as a modifier on OS X, since it sends a
-" special character instead, so use that character instead.)
-nnoremap “ :set columns=90<cr>
-
-" Restore full width window
-nnoremap ‘ :set columns=1000<cr>
-
-
-
 " ====================================================================== }}}
 " Folding ============================================================== {{{
-
 
 
 " Enable code folding
@@ -301,17 +209,95 @@ function! MyFoldText()
 endfunction
 set foldtext=MyFoldText()
 
-
-
 " Use space to toggle folds
 nnoremap <space> za
 vnoremap <space> za
 
 
+" ====================================================================== }}}
+
+" EDITING TEXT #########################################################
+" Indentation ========================================================== {{{
+
+
+" Enable indentation
+filetype indent on
+
+" Use automatic indentation
+set autoindent
+set smartindent
+set smarttab
+
+" Tabs are two spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+" Maintain selection when indenting
+vnoremap < <gv
+vnoremap > >gv
+
 
 " ====================================================================== }}}
-" Fonts and colors ===================================================== {{{
+" Moving text ========================================================== {{{
 
+
+" Move lines using leader-j,k
+nnoremap <leader>j :m+<cr>==
+nnoremap <leader>k :m-2<cr>==
+vnoremap <leader>j :m'>+<cr>gv=gv
+vnoremap <leader>k :m-2<cr>gv=gv
+
+
+" ====================================================================== }}}
+" Yanking and pasting ================================================== {{{
+
+
+" Paste from system clipboard
+nnoremap <leader>p "*p
+
+" Yank to system clipboard
+nnoremap <leader>y "*y
+vnoremap <leader>y "*y
+
+" Reselect pasted text
+nnoremap <leader>v V`]
+
+
+" ====================================================================== }}}
+" Wrapping ============================================================= {{{
+
+
+" Wrap text in breaks (do not split words)
+set wrap linebreak
+" Default to not wrap text (for code)
+set nowrap
+" When wrapping, use a width of 80
+set textwidth=80
+
+" Wrap a paragraph
+nnoremap Q gqip
+vnoremap Q gq
+
+" Wrap an entire file
+nnoremap <leader>q gggqG
+
+" Toggle an indicator of the wrapping column
+function! ToggleColorColumn()
+  if &colorcolumn
+    set colorcolumn=
+  else
+    let &colorcolumn = &textwidth + 1
+  end
+endfunction
+nnoremap <leader>cc :call ToggleColorColumn()<cr>
+
+
+" ====================================================================== }}}
+
+" GRAPHICAL VIM ########################################################
+" Fonts and colors ===================================================== {{{
 
 
 " Highlight current line
@@ -324,25 +310,20 @@ set numberwidth=6
 " Toggle relative and absolute numbering
 nnoremap <c-s-n> :set relativenumber!<cr>
 
-
-
 if has("gui_running")
 
   " Hide the toolbar
   set guioptions-=T
-
   " Hide the left scrollbar
   set guioptions=r
 
   " Set font
   set guifont=IBM\ Plex\ Mono:h14
-
   " Increase leading
   set linespace=4
 
   " Enable syntax coloring
   syntax enable
-
   " Set the colorscheme
   colorscheme base16-ocean
   set background=dark
@@ -350,24 +331,43 @@ if has("gui_running")
 endif
 
 
+" ====================================================================== }}}
+" Split window management ============================================== {{{
+
+
+" Move between splits
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+" Add the same directions for the terminal
+tnoremap <c-h> <c-w>h
+tnoremap <c-j> <c-w>j
+tnoremap <c-k> <c-w>k
+tnoremap <c-l> <c-w>l
+
+" Open new empty splits in the specified direction
+nnoremap <s-h> :leftabove vnew<cr>
+nnoremap <s-j> :rightbelow new<cr>
+nnoremap <s-k> :leftabove new<cr>
+nnoremap <s-l> :rightbelow vnew<cr>
+
+" Close a split/buffer more naturally
+nnoremap <c-q> :q<cr>
+
+" Quickly open help files in right vsplit
+nnoremap <c-a> :vert bo help 
+
+" Make window narrow for editing prose/markdown
+" (Can't use alt/meta as a modifier on OS X, since it sends a
+" special character instead, so use that character instead.)
+nnoremap “ :set columns=90<cr>
+
+" Restore full width window
+nnoremap ‘ :set columns=1000<cr>
+
 
 " ====================================================================== }}}
-" Editing vimrc ======================================================== {{{
 
-
-
-" Quickly open vimrc
-nnoremap <leader>rc :e ~/.vim/vimrc<cr>
-
-" Reload vimrc on save
-augroup EditingVimrc
-  au!
-  au BufWritePost vimrc mkview | source % | loadview
-  au BufWinLeave  vimrc silent! mkview
-  au BufWinEnter  vimrc silent! loadview
-augroup end
-
-
-
-" ====================================================================== }}}
 " vim: set fdm=marker :
