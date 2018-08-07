@@ -291,7 +291,8 @@ function! ToggleColorColumn()
     let &colorcolumn = &textwidth + 1
   end
 endfunction
-nnoremap <leader>cc :call ToggleColorColumn()<cr>
+nnoremap <c-q> :call ToggleColorColumn()<cr>
+
 
 
 " ====================================================================== }}}
@@ -316,7 +317,7 @@ set number
 set numberwidth=6
 
 " Toggle relative and absolute numbering
-nnoremap <c-s-n> :set relativenumber!<cr>
+nnoremap <c-n> :set relativenumber!<cr>
 
 if has("gui_running")
 
@@ -360,9 +361,6 @@ nnoremap <s-h> :leftabove vnew<cr>
 nnoremap <s-j> :rightbelow new<cr>
 nnoremap <s-k> :leftabove new<cr>
 nnoremap <s-l> :rightbelow vnew<cr>
-
-" Close a split/buffer more naturally
-nnoremap <c-q> :q<cr>
 
 " Quickly open help files in right vsplit
 nnoremap <c-a> :vert bo help 
