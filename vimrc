@@ -138,10 +138,24 @@ nnoremap <leader>p "*p
 nnoremap <leader>y "*y
 vnoremap <leader>y "*y
 
+" Reselect pasted text
+nnoremap <leader>v V`]
+
 
 
 " Close HTML tag
 inoremap <c-d-.> </<c-x><c-o>
+
+
+
+" Maintain selection when indenting
+vnoremap < <gv
+vnoremap > >gv
+
+
+
+" More intuitive redo command
+nnoremap U <c-r>
 
 
 
