@@ -59,6 +59,7 @@ nnoremap ; :
 " Exit insert mode with shift-space
 inoremap <s-space> <esc>
 noremap  <s-space> <esc>
+cnoremap <s-space> <c-u><esc>
 
 " Leaders
 let mapleader = ","
