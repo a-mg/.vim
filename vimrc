@@ -333,7 +333,7 @@ nnoremap <s-k> :leftabove new<cr>
 nnoremap <s-l> :rightbelow vnew<cr>
 
 " Quickly open help files in right vsplit
-nnoremap <c-a> :vert bo help 
+nnoremap <c-a> :vert bo help<space>
 
 " Make window narrow for editing prose/markdown
 " (Can't use alt/meta as a modifier on OS X, since it sends a
