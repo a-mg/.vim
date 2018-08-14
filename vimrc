@@ -336,10 +336,10 @@ nnoremap <s-l> :rightbelow vnew<cr>
 nnoremap <c-a> :vert bo help<space>
 
 " Make window narrow for editing prose/markdown
-nnoremap <c-[> :set columns=90<cr>
+nnoremap _ :set columns=90<cr>
 
 " Restore full width window
-nnoremap <c-]> :set columns=1000<cr>
+nnoremap + :set columns=1000<cr>
 
 " ====================================================================== }}}
 " ######################################################################
