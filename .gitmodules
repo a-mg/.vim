@@ -28,3 +28,6 @@
 [submodule "bundle/slime"]
 	path = bundle/slime
 	url = https://github.com/jpalardy/vim-slime.git
+[submodule "bundle/easy-align"]
+	path = bundle/easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
