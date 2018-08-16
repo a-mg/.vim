@@ -300,7 +300,7 @@ if has("gui_running")
   set guioptions=r
 
   " Set font
-  set guifont=RecursiveMono-StrictRegular:h14
+  set guifont=RecursiveMono-CasualRegular:h14
   " Increase leading
   set linespace=4
 
