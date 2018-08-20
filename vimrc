@@ -116,7 +116,10 @@ set viminfo+=n~/.vim/local/info/viminfo
 " Editing vimrc ======================================================== {{{
 
 " Quickly open vimrc
-nnoremap <leader>rc :e ~/.vim/vimrc<cr>
+nnoremap <leader>ev :edit $MYVIMRC<cr>
+
+" Reload vimrc in other buffers
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Reload vimrc on save
 augroup EditingVimrc
