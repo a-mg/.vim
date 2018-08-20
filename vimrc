@@ -30,10 +30,13 @@ set encoding=utf-8
 
 " Show partial commands while typing
 set showcmd
+
 " Hide the current mode (used for status line replacement)
 set noshowmode
+
 " Don't beep constantly
 set visualbell
+
 " Disable the intro message
 set shortmess+=I
 
