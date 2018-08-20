@@ -69,6 +69,23 @@ let maplocalleader = "\\"
 nnoremap U <c-r>
 
 " ====================================================================== }}}
+" Memory training keybindings ========================================== {{{
+
+" These commands remove keybindings that represent bad habits or
+" `non-Vim` ways of doing things (arrow keys, etc.) in order to
+" re-train muscle memory.
+
+" Disable the escape key (force shift-space)
+inoremap <esc> <nop>
+noremap  <esc> <nop>
+
+" Remove arrow keys in insert mode
+inoremap <left>  <nop>
+inoremap <right> <nop>
+inoremap <up>    <nop>
+inoremap <down>  <nop>
+
+" ====================================================================== }}}
 " Local files ========================================================== {{{
 
 " Move undo files to vim directory
