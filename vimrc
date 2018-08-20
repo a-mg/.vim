@@ -121,6 +121,9 @@ set viminfo+=n~/.vim/local/info/viminfo
 " Quickly open vimrc
 nnoremap <leader>ev :edit $MYVIMRC<cr>
 
+" Open vimrc in split
+nnoremap <leader>rv :vsplit $MYVIMRC<cr>
+
 " Reload vimrc in other buffers
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
@@ -365,6 +368,9 @@ endif
 
 " ====================================================================== }}}
 " Split window management ============================================== {{{
+
+" Open vertical splits to the right by default
+set splitright
 
 " Move between splits
 nnoremap <c-h> <c-w>h
