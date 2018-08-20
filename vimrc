@@ -265,6 +265,10 @@ vnoremap <leader>y "*y
 nnoremap <leader>d yyp
 vnoremap <leader>d y`]p
 
+" Duplicate a line or region, commenting the original
+nmap <leader>cd yygccp
+vmap <leader>cd ygvgc`]p
+
 " Select the last pasted/changed text
 nnoremap <leader>v `[v`]
 
@@ -307,34 +311,53 @@ inoremap <c-.> </<c-x><c-o>
 " ######################################################################
 
 " GRAPHICAL VIM ########################################################
-" Fonts and colors ===================================================== {{{
+" Line numbering ======================================================= {{{
 
 " Highlight current line
 set cursorline
 
-" Turn on line numbering
-set number
+" Set width of number column
 set numberwidth=6
 
+" Default to relative line numbering
+set relativenumber
+
 " Toggle relative and absolute numbering
-nnoremap <c-r> :set relativenumber!<cr>
+function! ToggleNumber()
+  if &relativenumber
+    set norelativenumber
+    set number
+  else
+    set relativenumber
+    set nonumber
+  endif
+endfunction
+nnoremap <c-r> :call ToggleNumber()<cr>
+
+" ====================================================================== }}}
+" Fonts and colors ===================================================== {{{
 
 if has("gui_running")
+  
   " Hide the toolbar
   set guioptions-=T
+
   " Hide the left scrollbar
   set guioptions=r
 
   " Set font
   set guifont=RecursiveMono-StrictRegular:h14
+
   " Increase leading
   set linespace=4
 
   " Enable syntax coloring
   syntax enable
+
   " Set the colorscheme
   colorscheme base16-ocean
   set background=dark
+
 endif
 
 " ====================================================================== }}}
