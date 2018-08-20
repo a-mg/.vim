@@ -273,10 +273,12 @@ nnoremap <leader>v `[v`]
 
 " Wrap text in breaks (do not split words)
 set wrap linebreak
+
 " Default to not wrap text (for code)
 set nowrap
-" When wrapping, use a width of 80
-set textwidth=80
+
+" Do not hard wrap text (by default)
+set textwidth=0
 
 " Wrap a paragraph
 nnoremap Q gqip
