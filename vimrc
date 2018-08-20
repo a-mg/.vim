@@ -261,8 +261,12 @@ nnoremap <leader>p "*p
 nnoremap <leader>y "*y
 vnoremap <leader>y "*y
 
-" Reselect pasted text
-nnoremap <leader>v V`]
+" Duplicate a line or region of text
+nnoremap <leader>d yyp
+vnoremap <leader>d y`]p
+
+" Select the last pasted/changed text
+nnoremap <leader>v `[v`]
 
 " ====================================================================== }}}
 " Wrapping ============================================================= {{{
