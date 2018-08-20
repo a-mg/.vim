@@ -57,7 +57,7 @@ filetype plugin on
 noremap ; :
 
 " Use shift-space as escape
-cnoremap <s-space> <esc>
+inoremap <s-space> <esc>
 noremap  <s-space> <esc>
 cnoremap <s-space> <c-u><esc>
 
