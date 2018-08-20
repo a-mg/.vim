@@ -311,7 +311,7 @@ set number
 set numberwidth=6
 
 " Toggle relative and absolute numbering
-nnoremap <c-n> :set relativenumber!<cr>
+nnoremap <c-r> :set relativenumber!<cr>
 
 if has("gui_running")
   " Hide the toolbar
@@ -347,10 +347,10 @@ tnoremap <c-k> <c-w>k
 tnoremap <c-l> <c-w>l
 
 " Open new empty splits in the specified direction
-nnoremap <s-h> :leftabove vnew<cr>
-nnoremap <s-j> :rightbelow new<cr>
-nnoremap <s-k> :leftabove new<cr>
-nnoremap <s-l> :rightbelow vnew<cr>
+nnoremap <c-n>h :leftabove vnew<cr>
+nnoremap <c-n>j :rightbelow new<cr>
+nnoremap <c-n>k :leftabove new<cr>
+nnoremap <c-n>l :rightbelow vnew<cr>
 
 " Quickly open help files in right vsplit
 nnoremap <c-a> :vert bo help<space>
