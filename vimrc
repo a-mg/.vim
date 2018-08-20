@@ -54,10 +54,10 @@ filetype plugin on
 " Basic keybindings ==================================================== {{{
 
 " Use semicolon for commands
-nnoremap ; :
+noremap ; :
 
 " Use shift-space as escape
-inoremap <s-space> <esc>
+cnoremap <s-space> <esc>
 noremap  <s-space> <esc>
 cnoremap <s-space> <c-u><esc>
 
