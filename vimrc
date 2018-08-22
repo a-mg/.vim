@@ -155,6 +155,10 @@ nnoremap g^ ^
 nnoremap g$ $
 nnoremap g0 0
 
+" Use capital motions to jump to start and end of line
+nnoremap H g0
+nnoremap L g$
+
 " Use tab to jump between matching braces
 nnoremap <tab> %
 vnoremap <tab> %
@@ -297,16 +301,6 @@ vnoremap Q gq
 " Wrap an entire file
 nnoremap <leader>q mqgggqG`q
 
-" Toggle an indicator of the wrapping column
-function! ToggleColorColumn()
-  if &colorcolumn
-    set colorcolumn=
-  else
-    let &colorcolumn = &textwidth + 1
-  end
-endfunction
-nnoremap <c-q> :call ToggleColorColumn()<cr>
-
 " ====================================================================== }}}
 " Code completion ====================================================== {{{
 
@@ -339,6 +333,26 @@ function! ToggleNumber()
   endif
 endfunction
 nnoremap <c-r> :call ToggleNumber()<cr>
+
+" ====================================================================== }}}
+" Color column ========================================================= {{{
+
+" Set width of color column
+let g:mycolorcolumn=80
+
+" Turn on the color column
+set colorcolumn=
+let &colorcolumn=g:mycolorcolumn
+
+" Toggle an indicator of the wrapping column
+function! ToggleColorColumn()
+  if &colorcolumn
+    set colorcolumn=
+  else
+    let &colorcolumn=g:mycolorcolumn
+  end
+endfunction
+nnoremap <c-q> :call ToggleColorColumn()<cr>
 
 " ====================================================================== }}}
 " Fonts and colors ===================================================== {{{
