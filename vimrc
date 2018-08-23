@@ -87,10 +87,10 @@ inoremap <left>  <nop>
 inoremap <right> <nop>
 inoremap <up>    <nop>
 inoremap <down>  <nop>
-noremap <left>  <nop>
-noremap <right> <nop>
-noremap <up>    <nop>
-noremap <down>  <nop>
+noremap  <left>  <nop>
+noremap  <right> <nop>
+noremap  <up>    <nop>
+noremap  <down>  <nop>
 
 " ====================================================================== }}}
 " Local files ========================================================== {{{
