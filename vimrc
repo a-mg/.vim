@@ -82,7 +82,7 @@ nnoremap U <c-r>
 inoremap <esc> <nop>
 noremap  <esc> <nop>
 
-" Remove arrow keys in mode
+" Remove arrow keys
 inoremap <left>  <nop>
 inoremap <right> <nop>
 inoremap <up>    <nop>
