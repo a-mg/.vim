@@ -41,7 +41,7 @@ set visualbell
 set shortmess+=I
 
 " ====================================================================== }}}
-" Plugin system ======================================================== {{{
+" Pathogen ============================================================= {{{
 
 " Setup Pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
@@ -54,7 +54,7 @@ endif
 filetype plugin on
 
 " ====================================================================== }}}
-" Basic keybindings ==================================================== {{{
+" Keybindings, basic =================================================== {{{
 
 " Use semicolon for commands
 noremap ; :
@@ -72,7 +72,7 @@ let maplocalleader = "\\"
 nnoremap U <c-r>
 
 " ====================================================================== }}}
-" Memory training keybindings ========================================== {{{
+" Keybindings, corrective ============================================== {{{
 
 " These commands remove keybindings that represent bad habits or
 " `non-Vim` ways of doing things (arrow keys, etc.) in order to
@@ -142,8 +142,8 @@ augroup end
 " ====================================================================== }}}
 " ######################################################################
 
-" VIEWING AND NAVIGATING TEXT ##########################################
-" Motion (within text) ================================================= {{{
+" NAVIGATING TEXT ######################################################
+" Motion =============================================================== {{{
 
 " Move by screen lines, not file lines
 nnoremap j gj
@@ -314,7 +314,72 @@ inoremap <c-.> </<c-x><c-o>
 " ====================================================================== }}}
 " ######################################################################
 
+" WINDOW MANAGEMENT ####################################################
+" Splits =============================================================== {{{
+
+" Open vertical splits to the right by default
+set splitright
+
+" Move between splits
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+" Add the same directions for the terminal
+tnoremap <c-h> <c-w>h
+tnoremap <c-j> <c-w>j
+tnoremap <c-k> <c-w>k
+tnoremap <c-l> <c-w>l
+
+" Open new empty splits in the specified direction
+nnoremap <c-n>h :leftabove vnew<cr>
+nnoremap <c-n>j :rightbelow new<cr>
+nnoremap <c-n>k :leftabove new<cr>
+nnoremap <c-n>l :rightbelow vnew<cr>
+
+" Quickly open help files in right vsplit
+nnoremap <c-a> :vert bo help<space>
+
+" ====================================================================== }}}
+" Window width ========================================================= {{{
+
+" Make window narrow for editing prose/markdown
+nnoremap _ :set columns=90<cr>
+
+" Restore full width window
+nnoremap + :set columns=1000<cr>
+
+" ====================================================================== }}}
+" ######################################################################
+
 " GRAPHICAL VIM ########################################################
+" Fonts and colors ===================================================== {{{
+
+if has("gui_running")
+  
+  " Hide the toolbar
+  set guioptions-=T
+
+  " Hide the left scrollbar
+  set guioptions=r
+
+  " Set font
+  set guifont=RecursiveMono-StrictRegular:h14
+
+  " Increase leading
+  set linespace=4
+
+  " Enable syntax coloring
+  syntax enable
+
+  " Set the colorscheme
+  colorscheme base16-ocean
+  set background=dark
+
+endif
+
+" ====================================================================== }}}
 " Line numbering ======================================================= {{{
 
 " Highlight current line
@@ -357,65 +422,6 @@ function! ToggleColorColumn()
   end
 endfunction
 nnoremap <c-q> :call ToggleColorColumn()<cr>
-
-" ====================================================================== }}}
-" Fonts and colors ===================================================== {{{
-
-if has("gui_running")
-  
-  " Hide the toolbar
-  set guioptions-=T
-
-  " Hide the left scrollbar
-  set guioptions=r
-
-  " Set font
-  set guifont=RecursiveMono-StrictRegular:h14
-
-  " Increase leading
-  set linespace=4
-
-  " Enable syntax coloring
-  syntax enable
-
-  " Set the colorscheme
-  colorscheme base16-ocean
-  set background=dark
-
-endif
-
-" ====================================================================== }}}
-" Split window management ============================================== {{{
-
-" Open vertical splits to the right by default
-set splitright
-
-" Move between splits
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
-
-" Add the same directions for the terminal
-tnoremap <c-h> <c-w>h
-tnoremap <c-j> <c-w>j
-tnoremap <c-k> <c-w>k
-tnoremap <c-l> <c-w>l
-
-" Open new empty splits in the specified direction
-nnoremap <c-n>h :leftabove vnew<cr>
-nnoremap <c-n>j :rightbelow new<cr>
-nnoremap <c-n>k :leftabove new<cr>
-nnoremap <c-n>l :rightbelow vnew<cr>
-
-" Quickly open help files in right vsplit
-nnoremap <c-a> :vert bo help<space>
-
-" Make window narrow for editing prose/markdown
-nnoremap _ :set columns=90<cr>
-
-" Restore full width window
-nnoremap + :set columns=1000<cr>
 
 " ====================================================================== }}}
 " ######################################################################
