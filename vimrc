@@ -167,8 +167,8 @@ nnoremap g$ $
 nnoremap g0 0
 
 " Use capital motions to jump to start and end of line
-noremap H g^
-noremap L g$
+noremap H ^
+noremap L $
 
 " Use tab to jump between matching braces
 nnoremap <tab> %
