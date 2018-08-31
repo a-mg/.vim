@@ -403,9 +403,11 @@ function! ToggleNumber()
   if &relativenumber
     set norelativenumber
     set number
+    highlight LineNr gui=bold
   else
     set relativenumber
     set nonumber
+    highlight LineNr gui=none
   endif
 endfunction
 nnoremap <c-r> :call ToggleNumber()<cr>
