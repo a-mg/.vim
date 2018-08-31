@@ -8,7 +8,7 @@
 " ----------------------------------------------------------------------
 "
 " Author: A. Mattson Gallagher <ndrwg@me.com>
-" Source: https://github.com/ndrwg/dotvim
+" Source: https://github.com/amgllghr/dotvim
 "
 " This file contains settings and configuration for the vim editor.
 " Only core settings and mappings are included here; any settings
