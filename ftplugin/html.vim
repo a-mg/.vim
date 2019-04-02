@@ -1,2 +1,2 @@
 " Close HTML tag
-inoremap <c-.> </<c-x><c-o>
+inoremap <d-/> </<c-x><c-o>
