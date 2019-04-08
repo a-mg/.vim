@@ -287,6 +287,7 @@ nnoremap <leader>d yyp
 vnoremap <leader>d y`]p
 
 " Duplicate a line or region, commenting the original
+" (mappings require vim-commentary plugin)
 nmap <leader>cd yygccp
 vmap <leader>cd ygvgc`]p
 
