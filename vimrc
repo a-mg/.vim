@@ -20,9 +20,9 @@
 " chord commands affect the editor/windows.
 "
 " References and reading:
-" Steve Losh  (https://bitbucket.org/sjl/dotfiles
-"              http://stevelosh.com/blog/2010/09/coming-home-to-vim/)
-" Emily St    (https://github.com/emilyst/home)
+" Steve Losh  https://bitbucket.org/sjl/dotfiles
+"             http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+" Emily St    https://github.com/emilyst/home
 "
 " ====================================================================== }}}
 
