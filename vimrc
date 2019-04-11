@@ -347,7 +347,7 @@ nnoremap <c-n>k :leftabove new<cr>
 nnoremap <c-n>l :rightbelow vnew<cr>
 
 " Quickly open help files in right vsplit
-nnoremap <c-a> :vert bo help<space>
+nnoremap <c-d> :vert bo help<space>
 
 " ====================================================================== }}}
 " Window width ========================================================= {{{
