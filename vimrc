@@ -139,12 +139,14 @@ nnoremap <leader>rv :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Reload vimrc on save
-" augroup EditingVimrc
-"   au!
-"   au BufWritePost vimrc mkview | source % | loadview
-"   au BufWinLeave  vimrc silent! mkview
-"   au BufWinEnter  vimrc silent! loadview
-" augroup end
+" TODO: Fix view/folding settings for vimrc
+augroup EditingVimrc
+  au!
+  " au BufWritePost vimrc mkview | source % | loadview
+  " au BufWinLeave  vimrc silent! mkview
+  " au BufWinEnter  vimrc silent! loadview
+  au BufWritePost vimrc source %
+augroup end
 
 " ====================================================================== }}}
 " ######################################################################
