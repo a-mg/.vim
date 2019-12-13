@@ -300,8 +300,8 @@ nnoremap <leader>v `[v`]
 " Insertions =========================================================== {{{
 
 " Insert a blank line below and exit editing
-nnoremap ,o mqo<esc>`q
-nnoremap ,O mqO<esc>`q
+nnoremap ,o m`o<esc>``
+nnoremap ,O m`O<esc>``
 
 " ====================================================================== }}}
 " Wrapping ============================================================= {{{
@@ -320,7 +320,7 @@ nnoremap Q gqip
 vnoremap Q gq
 
 " Wrap an entire file
-nnoremap <leader>q mqgggqG`q
+nnoremap <leader>q m`gggqG``
 
 " ====================================================================== }}}
 " Cleaning ============================================================= {{{
