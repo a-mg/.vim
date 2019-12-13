@@ -86,8 +86,8 @@ nnoremap U <c-r>
 " re-train muscle memory.
 
 " Disable the escape key (force shift-space)
-inoremap <esc> <nop>
-noremap  <esc> <nop>
+" inoremap <esc> <nop>
+" noremap  <esc> <nop>
 
 " Remove arrow keys
 inoremap <left>  <nop>
