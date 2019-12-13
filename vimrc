@@ -297,6 +297,13 @@ vmap <leader>cd ygvgc`]p
 nnoremap <leader>v `[v`]
 
 " ====================================================================== }}}
+" Insertions =========================================================== {{{
+
+" Insert a blank line below and exit editing
+nnoremap ,o mqo<esc>`q
+nnoremap ,O mqO<esc>`q
+
+" ====================================================================== }}}
 " Wrapping ============================================================= {{{
 
 " Wrap text in breaks (do not split words)
