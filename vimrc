@@ -78,6 +78,9 @@ let maplocalleader = "\\"
 " More intuitive redo command
 nnoremap U <c-r>
 
+" Save file
+nnoremap s :w<cr>
+
 " ====================================================================== }}}
 " Keybindings, corrective ============================================== {{{
 
