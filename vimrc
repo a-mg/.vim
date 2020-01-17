@@ -258,15 +258,8 @@ set gdefault
 nnoremap / /\v
 vnoremap / /\v
 
-" Keep matches in the middle of the screen
-" nnoremap n nzzzv
-" nnoremap N Nzzzv
-
 " Clear search higlights
 nnoremap <leader><space> :noh<cr>
-
-" Highlight matching braces
-" set showmatch
 
 " ====================================================================== }}}
 " Folding ============================================================== {{{
