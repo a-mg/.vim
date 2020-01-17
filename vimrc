@@ -47,16 +47,6 @@ set visualbell
 " Disable the intro message
 set shortmess+=I
 
-" ====================================================================== }}}
-" Pathogen ============================================================= {{{
-
-" Setup Pathogen
-runtime bundle/pathogen/autoload/pathogen.vim
-if exists("g:loaded_pathogen")
-  execute pathogen#infect()
-  execute pathogen#helptags()
-endif
-
 " Enable filetype plugins
 filetype plugin on
 
