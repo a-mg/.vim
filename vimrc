@@ -360,8 +360,9 @@ vnoremap <leader>k :m-2<cr>gv=gv
 " Insertions =========================================================== {{{
 
 " Insert a blank line below and exit editing
-nnoremap ,o m`o<esc>``
-nnoremap ,O m`O<esc>``
+" expansion: m`1o<esc>``
+nnoremap <expr> ,o 'm`' . v:count1 . 'o<esc>``'
+nnoremap <expr> ,O 'm`' . v:count1 . 'O<esc>``'
 
 " ====================================================================== }}}
 " Wrapping ============================================================= {{{
