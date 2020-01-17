@@ -95,11 +95,6 @@ set directory=~/.vim/local/swap//
 " Makes vim save state: folds, cursor, etc.
 set viewdir=~/.vim/local/view//
 set viewoptions=folds,cursor
-" augroup RememberLastView
-"   au!
-"   au BufWinLeave * silent! mkview
-"   au BufWinEnter * silent! loadview
-" augroup end
 
 " viminfo file
 set viminfo+=n~/.vim/local/info/viminfo
@@ -108,7 +103,7 @@ set viminfo+=n~/.vim/local/info/viminfo
 let g:netrw_home = expand('~/.vim/local/netrw')
 
 " ====================================================================== }}}
-" Editing vimrc ======================================================== {{{
+" Editing config ======================================================= {{{
 
 " Open config files in right split
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
