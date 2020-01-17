@@ -399,6 +399,14 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " ====================================================================== }}}
+" Lexima =============================================================== {{{
+
+" Match : with ; when writing CSS
+call lexima#add_rule({'char': ':', 'input_after': ';', 'filetype': 'css'})
+call lexima#add_rule({'char': ';', 'at': '\%#\;', 'leave': 1, 'filetype': 'css'})
+call lexima#add_rule({'char': '<BS>', 'at': '\:\%#\;', 'delete': 1, 'filetype': 'css'})
+
+" ====================================================================== }}}
 " ######################################################################
 
 " vim: set fdm=marker fdl=0 :
