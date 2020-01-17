@@ -119,6 +119,9 @@ set viewoptions=folds,cursor
 " viminfo file
 set viminfo+=n~/.vim/local/info/viminfo
 
+" .netrwhist history file
+let g:netrw_home = expand('~/.vim/local/netrw')
+
 " ====================================================================== }}}
 " Editing vimrc ======================================================== {{{
 
