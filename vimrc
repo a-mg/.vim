@@ -348,23 +348,6 @@ vmap <leader>cd ygvgc`]p
 nnoremap <leader>v `[v`]
 
 " ====================================================================== }}}
-" Moving text ========================================================== {{{
-
-" Move lines using leader-j,k
-nnoremap <leader>j :m+<cr>==
-nnoremap <leader>k :m-2<cr>==
-vnoremap <leader>j :m'>+<cr>gv=gv
-vnoremap <leader>k :m-2<cr>gv=gv
-
-" ====================================================================== }}}
-" Insertions =========================================================== {{{
-
-" Insert a blank line below and exit editing
-" expansion: m`1o<esc>``
-nnoremap <expr> ,o 'm`' . v:count1 . 'o<esc>``'
-nnoremap <expr> ,O 'm`' . v:count1 . 'O<esc>``'
-
-" ====================================================================== }}}
 " Wrapping ============================================================= {{{
 
 " Wrap text in breaks (do not split words)
@@ -384,7 +367,18 @@ vnoremap Q gq
 nnoremap <leader>q m`gggqG``
 
 " ====================================================================== }}}
-" Cleaning ============================================================= {{{
+" Organizing/refactoring =============================================== {{{
+
+" Move lines using leader-j,k
+nnoremap <leader>j :m+<cr>==
+nnoremap <leader>k :m-2<cr>==
+vnoremap <leader>j :m'>+<cr>gv=gv
+vnoremap <leader>k :m-2<cr>gv=gv
+
+" Insert a blank line below and exit editing
+" expansion: m`1o<esc>``
+nnoremap <expr> ,o 'm`' . v:count1 . 'o<esc>``'
+nnoremap <expr> ,O 'm`' . v:count1 . 'O<esc>``'
 
 " Clear trailing whitespace
 nnoremap <leader>tw :%s/\s\+$//<cr>:noh<cr>
