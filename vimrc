@@ -121,6 +121,98 @@ augroup end
 " ====================================================================== }}}
 " ######################################################################
 
+" EDITING ENVIRONMENT ##################################################
+" Fonts and colors ===================================================== {{{
+
+if has("gui_running")
+
+  " Hide the toolbar
+  set guioptions-=T
+
+  " Hide the left scrollbar
+  set guioptions=r
+
+  " Set font
+  set guifont=IBM\ Plex\ Mono:h14
+
+  " Increase leading
+  set linespace=4
+
+  " Enable syntax coloring
+  syntax enable
+
+  " Set the colorscheme
+  colorscheme base16-ocean
+  set background=dark
+
+endif
+
+" ====================================================================== }}}
+" Split windows ======================================================== {{{
+
+" Open vertical splits to the right by default
+set splitright
+
+" Move between splits
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+" Open new empty splits in the specified direction
+nnoremap <c-n>h :leftabove vnew<cr>
+nnoremap <c-n>j :rightbelow new<cr>
+nnoremap <c-n>k :leftabove new<cr>
+nnoremap <c-n>l :rightbelow vnew<cr>
+
+" Quickly open help files in right vsplit
+nnoremap <c-d> :vert bo help<space>
+
+" ====================================================================== }}}
+" Line numbering ======================================================= {{{
+
+" Highlight current line
+set cursorline
+
+" Set width of number column
+set numberwidth=6
+
+" Default to relative line numbering
+set relativenumber
+
+" Toggle relative and absolute numbering
+function! ToggleNumber()
+  if &relativenumber
+    set norelativenumber
+    set number
+    highlight LineNr gui=bold
+  else
+    set relativenumber
+    set nonumber
+    highlight LineNr gui=none
+  endif
+endfunction
+nnoremap <c-r> :call ToggleNumber()<cr>
+
+" ====================================================================== }}}
+" Color column ========================================================= {{{
+
+" Set width of color column
+let g:mycolorcolumn=80
+
+" Toggle an indicator of the wrapping column
+function! ToggleColorColumn()
+  if &colorcolumn
+    set colorcolumn=
+  else
+    let &colorcolumn=g:mycolorcolumn
+  end
+endfunction
+nnoremap <c-q> :call ToggleColorColumn()<cr>
+
+" ====================================================================== }}}
+" ######################################################################
+
 " NAVIGATING TEXT ######################################################
 " Motion =============================================================== {{{
 
@@ -297,120 +389,6 @@ nnoremap <leader>q m`gggqG``
 
 " Clear trailing whitespace
 nnoremap <leader>tw :%s/\s\+$//<cr>:noh<cr>
-
-" ====================================================================== }}}
-" ######################################################################
-
-" WINDOW MANAGEMENT ####################################################
-" Splits =============================================================== {{{
-
-" Open vertical splits to the right by default
-set splitright
-
-" Move between splits
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
-
-" Add the same directions for the terminal
-tnoremap <c-h> <c-w>h
-tnoremap <c-j> <c-w>j
-tnoremap <c-k> <c-w>k
-tnoremap <c-l> <c-w>l
-
-" Open new empty splits in the specified direction
-nnoremap <c-n>h :leftabove vnew<cr>
-nnoremap <c-n>j :rightbelow new<cr>
-nnoremap <c-n>k :leftabove new<cr>
-nnoremap <c-n>l :rightbelow vnew<cr>
-
-" Quickly open help files in right vsplit
-nnoremap <c-d> :vert bo help<space>
-
-" ====================================================================== }}}
-" Window width ========================================================= {{{
-
-" Make window narrow for editing prose/markdown
-nnoremap _ :set columns=90<cr>
-
-" Restore full width window
-nnoremap + :set columns=1000<cr>
-
-" ====================================================================== }}}
-" ######################################################################
-
-" GRAPHICAL VIM ########################################################
-" Fonts and colors ===================================================== {{{
-
-if has("gui_running")
-
-  " Hide the toolbar
-  set guioptions-=T
-
-  " Hide the left scrollbar
-  set guioptions=r
-
-  " Set font
-  set guifont=IBM\ Plex\ Mono:h14
-
-  " Increase leading
-  set linespace=4
-
-  " Enable syntax coloring
-  syntax enable
-
-  " Set the colorscheme
-  colorscheme base16-ocean
-  set background=dark
-
-endif
-
-" ====================================================================== }}}
-" Line numbering ======================================================= {{{
-
-" Highlight current line
-set cursorline
-
-" Set width of number column
-set numberwidth=6
-
-" Default to relative line numbering
-set relativenumber
-
-" Toggle relative and absolute numbering
-function! ToggleNumber()
-  if &relativenumber
-    set norelativenumber
-    set number
-    highlight LineNr gui=bold
-  else
-    set relativenumber
-    set nonumber
-    highlight LineNr gui=none
-  endif
-endfunction
-nnoremap <c-r> :call ToggleNumber()<cr>
-
-" ====================================================================== }}}
-" Color column ========================================================= {{{
-
-" Set width of color column
-let g:mycolorcolumn=80
-
-" Turn on the color column
-set colorcolumn=
-let &colorcolumn=g:mycolorcolumn
-
-" Toggle an indicator of the wrapping column
-function! ToggleColorColumn()
-  if &colorcolumn
-    set colorcolumn=
-  else
-    let &colorcolumn=g:mycolorcolumn
-  end
-endfunction
-nnoremap <c-q> :call ToggleColorColumn()<cr>
 
 " ====================================================================== }}}
 " ######################################################################
