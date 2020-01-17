@@ -7,8 +7,8 @@
 " ------------Y88P-----888---888--888--888---888------'Y8888P-----------
 " ----------------------------------------------------------------------
 "
-" Author: A. Mattson Gallagher <ndrwg@me.com>
-" Source: https://github.com/amgllghr/dotvim
+" Author: A. Mattson Gallagher <amg@a-m-g.org>
+" Source: https://github.com/a-mg/dotvim
 "
 " This file contains settings and configuration for the vim editor.
 " Only core settings and mappings are included here; any settings
@@ -20,9 +20,9 @@
 " chord commands affect the editor/windows.
 "
 " References and reading:
-" Steve Losh  https://bitbucket.org/sjl/dotfiles
-"             http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-" Emily St    https://github.com/emilyst/home
+" https://bitbucket.org/sjl/dotfiles
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+" https://github.com/emilyst/home
 "
 " ====================================================================== }}}
 
