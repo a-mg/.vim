@@ -19,9 +19,6 @@
 [submodule "bundle/airline-themes"]
 	path = bundle/airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule "bundle/slime"]
-	path = bundle/slime
-	url = https://github.com/jpalardy/vim-slime.git
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
