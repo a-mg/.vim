@@ -125,23 +125,17 @@ let g:netrw_home = expand('~/.vim/local/netrw')
 " ====================================================================== }}}
 " Editing vimrc ======================================================== {{{
 
-" Quickly open vimrc
-nnoremap <leader>ev :edit $MYVIMRC<cr>
+" Open config files in right split
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
-" Open vimrc in split
-nnoremap <leader>rv :vsplit $MYVIMRC<cr>
-
-" Reload vimrc in other buffers
+" Globally reload vimrc settings
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" Reload vimrc on save
-" TODO: Fix view/folding settings for vimrc
+" Globally reload vimrc settings after closing the buffer
+" (when editing is complete)
 augroup EditingVimrc
   au!
-  " au BufWritePost vimrc mkview | source % | loadview
-  " au BufWinLeave  vimrc silent! mkview
-  " au BufWinEnter  vimrc silent! loadview
-  au BufWritePost vimrc source %
+  au BufWinLeave vimrc source $MYVIMRC
 augroup end
 
 " ====================================================================== }}}
