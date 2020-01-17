@@ -321,23 +321,19 @@ vnoremap < <gv
 vnoremap > >gv
 
 " ====================================================================== }}}
-" Moving text ========================================================== {{{
-
-" Move lines using leader-j,k
-nnoremap <leader>j :m+<cr>==
-nnoremap <leader>k :m-2<cr>==
-vnoremap <leader>j :m'>+<cr>gv=gv
-vnoremap <leader>k :m-2<cr>gv=gv
-
-" ====================================================================== }}}
-" Yanking and pasting ================================================== {{{
+" Clipboard ============================================================ {{{
 
 " Paste from system clipboard
-nnoremap <leader>p "*p
+nnoremap P "*p
 
 " Yank to system clipboard
-nnoremap <leader>y "*y
-vnoremap <leader>y "*y
+nnoremap Y "*y
+vnoremap Y "*y
+
+" Restore default behaviors under g
+nnoremap gP P
+nnoremap gY Y
+vnoremap gY Y
 
 " Duplicate a line or region of text
 nnoremap <leader>d yyp
@@ -350,6 +346,15 @@ vmap <leader>cd ygvgc`]p
 
 " Select the last pasted/changed text
 nnoremap <leader>v `[v`]
+
+" ====================================================================== }}}
+" Moving text ========================================================== {{{
+
+" Move lines using leader-j,k
+nnoremap <leader>j :m+<cr>==
+nnoremap <leader>k :m-2<cr>==
+vnoremap <leader>j :m'>+<cr>gv=gv
+vnoremap <leader>k :m-2<cr>gv=gv
 
 " ====================================================================== }}}
 " Insertions =========================================================== {{{
