@@ -26,11 +26,14 @@
 "
 " ====================================================================== }}}
 
-" FOUNDATION ###########################################################
+" SYSTEM ###############################################################
 " Preamble ============================================================= {{{
 
 " Remove vi compatibility
 set nocompatible
+
+" Enable filetype plugins
+filetype plugin on
 
 " Text encoding
 set encoding=utf-8
@@ -47,11 +50,8 @@ set visualbell
 " Disable the intro message
 set shortmess+=I
 
-" Enable filetype plugins
-filetype plugin on
-
 " ====================================================================== }}}
-" Keybindings, basic =================================================== {{{
+" Keybindings ========================================================== {{{
 
 " Use semicolon for commands
 noremap ; :
