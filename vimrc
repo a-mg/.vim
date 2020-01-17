@@ -71,22 +71,7 @@ nnoremap U <c-r>
 " Save file
 nnoremap s :w<cr>
 
-" ====================================================================== }}}
-" Keybindings, corrective ============================================== {{{
-
-" These commands remove keybindings that represent bad habits or
-" `non-Vim` ways of doing things (arrow keys, etc.) in order to
-" re-train muscle memory.
-
-" Disable the escape key (force shift-space)
-" inoremap <esc> <nop>
-" noremap  <esc> <nop>
-
-" Remove arrow keys
-inoremap <left>  <nop>
-inoremap <right> <nop>
-inoremap <up>    <nop>
-inoremap <down>  <nop>
+" Remove arrow keys in normal mode (corrective)
 noremap  <left>  <nop>
 noremap  <right> <nop>
 noremap  <up>    <nop>
