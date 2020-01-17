@@ -20,8 +20,8 @@
 " chord commands affect the editor/windows.
 "
 " References and reading:
-" https://bitbucket.org/sjl/dotfiles
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+" https://hg.stevelosh.com/dotfiles/file/tip/vim/vimrc
 " https://github.com/emilyst/home
 "
 " ====================================================================== }}}
@@ -171,9 +171,6 @@ nnoremap <c-d> :vert bo help<space>
 " ====================================================================== }}}
 " Line numbering ======================================================= {{{
 
-" Highlight current line
-set cursorline
-
 " Set width of number column
 set numberwidth=6
 
@@ -195,7 +192,15 @@ endfunction
 nnoremap <c-r> :call ToggleNumber()<cr>
 
 " ====================================================================== }}}
-" Color column ========================================================= {{{
+" Marker lines ========================================================= {{{
+
+" Only show the cursorline in the current window
+set cursorline
+augroup cursorline
+    au!
+    au WinLeave * set nocursorline
+    au WinEnter * set cursorline
+augroup END
 
 " Set width of color column
 let g:mycolorcolumn=80
