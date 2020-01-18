@@ -322,7 +322,7 @@ nnoremap <expr> ,O 'm`' . v:count1 . 'O<esc>``'
 " Deleting ============================================================= {{{
 
 " Delete character to right of cursor
-inoremap <s-bs> <esc>lxi
+inoremap <s-bs> <esc>lcl
 
 " Clear trailing whitespace
 nnoremap <leader>tw :%s/\s\+$//<cr>:noh<cr>
