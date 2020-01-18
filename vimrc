@@ -168,6 +168,9 @@ nnoremap <c-n>l :rightbelow vnew<cr>
 " Quickly open help files in right vsplit
 nnoremap <c-d> :vert bo help<space>
 
+" Maximize the window
+nnoremap <c-m> :set columns=1000<cr>:set lines=1000<cr>
+
 " ====================================================================== }}}
 " Line numbering ======================================================= {{{
 
