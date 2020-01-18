@@ -195,7 +195,7 @@ endfunction
 nnoremap <c-r> :call ToggleNumber()<cr>
 
 " ====================================================================== }}}
-" Marker lines ========================================================= {{{
+" Cursors ============================================================== {{{
 
 " Only show the cursorline in the current window
 set cursorline
@@ -217,6 +217,9 @@ function! ToggleColorColumn()
   end
 endfunction
 nnoremap <c-q> :call ToggleColorColumn()<cr>
+
+" Put a buffer between the cursor and the vertical edges
+set scrolloff=1
 
 " ====================================================================== }}}
 " ######################################################################
