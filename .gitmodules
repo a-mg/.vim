@@ -25,6 +25,7 @@
 [submodule "bundle/lexima.vim"]
 	path = pack/default/start/lexima.vim
 	url = git@github.com:cohama/lexima.vim.git
+  ignore = untracked
 [submodule "pack/bundle/start/vim-easy-align"]
 	path = pack/default/start/vim-easy-align
 	url = git@github.com:junegunn/vim-easy-align.git
