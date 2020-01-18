@@ -133,7 +133,7 @@ if has("gui_running")
   set guioptions=r
 
   " Set font
-  set guifont=IBM\ Plex\ Mono:h14
+  set guifont=Recursive\ Mono\ Strict:h14
 
   " Increase leading
   set linespace=4
