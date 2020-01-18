@@ -1,30 +1,30 @@
 [submodule "bundle/base16-vim"]
-	path = pack/bundle/start/base16-vim
+	path = pack/default/start/base16-vim
 	url = https://github.com/chriskempson/base16-vim.git
 [submodule "bundle/vim-commentary"]
-	path = pack/bundle/start/commentary
+	path = pack/default/start/commentary
 	url = https://github.com/tpope/vim-commentary/
 [submodule "bundle/vim-surround"]
-	path = pack/bundle/start/surround
+	path = pack/default/start/surround
 	url = https://github.com/tpope/vim-surround/
 [submodule "bundle/repeat"]
-	path = pack/bundle/start/repeat
+	path = pack/default/start/repeat
 	url = https://github.com/tpope/vim-repeat.git
 [submodule "bundle/airline"]
-	path = pack/bundle/start/airline
+	path = pack/default/start/airline
 	url = https://github.com/vim-airline/vim-airline.git
 [submodule "bundle/airline-themes"]
-	path = pack/bundle/start/airline-themes
+	path = pack/default/start/airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "bundle/solarized"]
-	path = pack/bundle/start/solarized
+	path = pack/default/start/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/racket"]
-	path = pack/bundle/start/racket
+	path = pack/default/start/racket
 	url = https://github.com/wlangstroth/vim-racket.git
 [submodule "bundle/lexima.vim"]
-	path = pack/bundle/start/lexima.vim
+	path = pack/default/start/lexima.vim
 	url = git@github.com:cohama/lexima.vim.git
 [submodule "pack/bundle/start/vim-easy-align"]
-	path = pack/bundle/start/vim-easy-align
+	path = pack/default/start/vim-easy-align
 	url = git@github.com:junegunn/vim-easy-align.git
