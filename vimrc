@@ -62,9 +62,9 @@ endfor
 noremap ; :
 
 " Use shift-space as escape
-inoremap <s-space> <esc>
-noremap  <s-space> <esc>
-cnoremap <s-space> <c-u><esc>
+" inoremap <s-space> <esc>
+" noremap  <s-space> <esc>
+" cnoremap <s-space> <c-u><esc>
 
 " Leaders
 let mapleader = ","
