@@ -73,8 +73,8 @@ let maplocalleader = "\\"
 " More intuitive redo command
 nnoremap U <c-r>
 
-" Save file
-nnoremap S :w<cr>
+" Write file
+nnoremap ' :w<cr>
 
 " Remove arrow keys in normal mode (corrective)
 noremap <left>  <nop>
