@@ -51,7 +51,6 @@ set visualbell
 set shortmess+=I
 
 " Generate plugin helptags
-" helptags expand('$HOME/.vim/pack/default/start/**/doc/')
 for p in glob('$HOME/.vim/pack/default/start/**/doc/', 1, 1)
   exe 'helptags ' . p
 endfor
