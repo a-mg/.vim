@@ -280,8 +280,8 @@ set gdefault
 nnoremap / /\v
 vnoremap / /\v
 
-" Clear search higlights
-nnoremap <leader><space> :noh<cr>
+" Clear the last search (clear highlighting)
+nnoremap <silent> <leader><space> :let @/ = ""<cr>
 
 " ====================================================================== }}}
 " Folding ============================================================== {{{
