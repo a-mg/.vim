@@ -29,3 +29,6 @@
 [submodule "pack/bundle/start/vim-easy-align"]
 	path = pack/default/start/easy-align
 	url = git@github.com:junegunn/vim-easy-align.git
+[submodule "pack/default/start/vinegar"]
+	path = pack/default/start/vinegar
+	url = git@github.com:tpope/vim-vinegar.git
