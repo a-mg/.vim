@@ -198,6 +198,7 @@ function! ToggleNumber()
     highlight LineNr gui=none
   endif
 endfunction
+
 nnoremap <c-r> :call ToggleNumber()<cr>
 
 " ====================================================================== }}}
@@ -222,6 +223,7 @@ function! ToggleColorColumn()
     let &colorcolumn=g:mycolorcolumn
   end
 endfunction
+
 nnoremap <c-q> :call ToggleColorColumn()<cr>
 
 " Put a buffer between the cursor and the vertical edges
@@ -421,6 +423,8 @@ nmap ga <Plug>(EasyAlign)
 
 " ====================================================================== }}}
 " Lexima =============================================================== {{{
+
+" Disable lexima until insert mode exited
 
 " Match : with ; when writing CSS
 call lexima#add_rule({'char': ':', 'input_after': ';', 'filetype': 'css'})
