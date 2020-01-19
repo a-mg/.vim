@@ -114,6 +114,9 @@ let g:netrw_home = expand('~/.vim/local/netrw')
 " Open config files in right split
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
+" Open a right split with ~/.vim in netrw
+nnoremap <leader>ee :Vexplore! ~/.vim<cr>
+
 " Globally reload vimrc settings
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
