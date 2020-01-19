@@ -74,13 +74,13 @@ let maplocalleader = "\\"
 nnoremap U <c-r>
 
 " Save file
-nnoremap s :w<cr>
+nnoremap S :w<cr>
 
 " Remove arrow keys in normal mode (corrective)
-noremap  <left>  <nop>
-noremap  <right> <nop>
-noremap  <up>    <nop>
-noremap  <down>  <nop>
+noremap <left>  <nop>
+noremap <right> <nop>
+noremap <up>    <nop>
+noremap <down>  <nop>
 
 " ====================================================================== }}}
 " Local files ========================================================== {{{
@@ -383,13 +383,14 @@ nnoremap gY Y
 vnoremap gY Y
 
 " Duplicate a line or region of text
-nnoremap <leader>d yyp
-vnoremap <leader>d y`]p
+nnoremap <leader>du yyp
+vnoremap <leader>du y`]p
 
 " Duplicate a line or region, commenting the original
 " (mappings require vim-commentary plugin)
-nmap <leader>cd yygccp
-vmap <leader>cd ygvgc`]p
+" This should maybe move to a plugin config file someday
+nmap <leader>dc yygccp
+vmap <leader>dc ygvgc`]p
 
 " Select the last pasted/changed text
 nnoremap <leader>v `[v`]
