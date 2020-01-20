@@ -318,6 +318,19 @@ nnoremap <space> za
 vnoremap <space> za
 
 " ====================================================================== }}}
+" Information ========================================================== {{{
+
+" Simpler word count function
+function! WordCount()
+  exe "silent normal g\<c-g>"
+  let s:word_count = split(v:statusmsg)[11]
+  let s:word_count = substitute(s:word_count, ";", "", "")
+  echo s:word_count . " words"
+endfunction
+
+nnoremap <leader>wc :call WordCount()<cr>
+
+" ====================================================================== }}}
 " ######################################################################
 
 " EDITING TEXT #########################################################
