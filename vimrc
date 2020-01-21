@@ -275,7 +275,7 @@ nnoremap / /\v
 vnoremap / /\v
 
 " Clear the last search (clear highlighting)
-nnoremap <silent> <leader>/ :let @/ = ""<cr>
+nnoremap <silent> <leader>/ :noh<cr>
 
 " ====================================================================== }}}
 " Folding ============================================================== {{{
