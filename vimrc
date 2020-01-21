@@ -61,11 +61,6 @@ endfor
 " Use semicolon for commands
 noremap ; :
 
-" Use shift-space as escape
-" inoremap <s-space> <esc>
-" noremap  <s-space> <esc>
-" cnoremap <s-space> <c-u><esc>
-
 " Leaders
 let mapleader = ","
 let maplocalleader = "\\"
@@ -280,7 +275,7 @@ nnoremap / /\v
 vnoremap / /\v
 
 " Clear the last search (clear highlighting)
-nnoremap <silent> <leader><space> :let @/ = ""<cr>
+nnoremap <silent> <leader>/ :let @/ = ""<cr>
 
 " ====================================================================== }}}
 " Folding ============================================================== {{{
