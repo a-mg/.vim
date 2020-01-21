@@ -74,7 +74,7 @@ let maplocalleader = "\\"
 nnoremap U <c-r>
 
 " Write file
-nnoremap ' :w<cr>
+nnoremap s :w<cr>
 
 " Remove arrow keys in normal mode (corrective)
 noremap <left>  <nop>
