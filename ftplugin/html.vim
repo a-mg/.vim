@@ -3,6 +3,21 @@ inoremap <buffer> <d-/> </<c-x><c-o>
 
 
 
+" Text objects for element attributes
+"
+"       <div class="lorem ipsum" id="dolor" attr-sit="amet">
+"                     ^
+" iha:       -----
+" ihv:              -----------
+" aha:      --------------------
+"
+vnoremap <silent> <buffer> iha :normal! f"F=T vt=<cr>
+onoremap <silent> <buffer> iha :normal! f"F=T vt=<cr>
+vnoremap <silent> <buffer> ihv :normal! f"F=f"lvi"<cr>
+onoremap <silent> <buffer> ihv :normal! f"F=f"lvi"<cr>
+vnoremap <silent> <buffer> aha :normal! f"F=F v2f"<cr>
+onoremap <silent> <buffer> aha :normal! f"F=F v2f"<cr>
+
 " Text objects for element attribute list
 "
 "       <div class="lorem ipsum" id="dolor" attr-sit="amet">
