@@ -367,6 +367,7 @@ vnoremap > >gv
 
 " Paste from system clipboard
 nnoremap P "*p
+vnoremap P "*p
 
 " Yank to system clipboard
 nnoremap Y "*y
@@ -374,8 +375,8 @@ vnoremap Y "*y
 
 " Restore default behaviors under g
 nnoremap gP P
-nnoremap gY Y
-vnoremap gY Y
+nnoremap gY y$
+vnoremap gY y$
 
 " Duplicate a line or region of text
 nnoremap <leader>du yyp
