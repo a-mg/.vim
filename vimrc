@@ -320,8 +320,8 @@ vnoremap <space> za
 
 " Insert a blank line below and exit editing
 " expansion: m`1o<esc>``
-nnoremap <expr> ,o 'm`' . v:count1 . 'o<esc>``'
-nnoremap <expr> ,O 'm`' . v:count1 . 'O<esc>``'
+nnoremap <expr> <leader>o 'm`' . v:count1 . 'o<esc>``'
+nnoremap <expr> <leader>O 'm`' . v:count1 . 'O<esc>``'
 
 " ====================================================================== }}}
 " Deleting ============================================================= {{{
