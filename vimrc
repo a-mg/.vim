@@ -372,6 +372,7 @@ vnoremap P "*p
 " Yank to system clipboard
 nnoremap Y "*y
 vnoremap Y "*y
+nnoremap YY "*yy
 
 " Restore default behaviors under g
 nnoremap gP P
