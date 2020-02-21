@@ -35,3 +35,6 @@
 [submodule "pack/default/start/pencil"]
 	path = pack/default/start/pencil
 	url = git@github.com:reedes/vim-colors-pencil.git
+[submodule "pack/default/start/fugitive"]
+	path = pack/default/start/fugitive
+	url = git@github.com:tpope/vim-fugitive.git
