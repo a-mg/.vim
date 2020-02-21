@@ -145,8 +145,8 @@ if has("gui_running")
   syntax enable
 
   " Set the colorscheme
-  colorscheme solarized
   set background=light
+  colorscheme pencil
 
 endif
 

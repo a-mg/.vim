@@ -32,3 +32,6 @@
 [submodule "pack/default/start/vinegar"]
 	path = pack/default/start/vinegar
 	url = git@github.com:tpope/vim-vinegar.git
+[submodule "pack/default/start/pencil"]
+	path = pack/default/start/pencil
+	url = git@github.com:reedes/vim-colors-pencil.git
