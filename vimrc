@@ -188,11 +188,9 @@ function! ToggleNumber()
   if &relativenumber
     set norelativenumber
     set number
-    highlight LineNr gui=bold
   else
     set relativenumber
     set nonumber
-    highlight LineNr gui=none
   endif
 endfunction
 
@@ -300,7 +298,7 @@ set foldmethod=syntax
 function! MyFoldText()
   let line = getline(v:foldstart)
 
-  let nucolwidth = &fdc + &number * &numberwidth
+  let nucolwidth = &fdc + (&relativenumber + &number) * &numberwidth
   let windowwidth = winwidth(0) - nucolwidth - 3
   let foldedlinecount = v:foldend - v:foldstart
 
