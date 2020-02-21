@@ -169,10 +169,10 @@ nnoremap <c-n>k :leftabove new<cr>
 nnoremap <c-n>l :rightbelow vnew<cr>
 
 " Quickly open help files in right vsplit
-nnoremap <c-d> :vert bo help<space>
+nnoremap ?? :vert bo help<space>
 
 " Maximize the window
-nnoremap <c-m> :set columns=1000<cr>:set lines=1000<cr>
+nnoremap <leader>+ :set columns=1000<cr>:set lines=1000<cr>
 
 " ====================================================================== }}}
 " Line numbering ======================================================= {{{
@@ -225,6 +225,12 @@ nnoremap <c-q> :call ToggleColorColumn()<cr>
 
 " Put a buffer between the cursor and the vertical edges
 set scrolloff=1
+
+" ====================================================================== }}}
+" Filetypes ============================================================ {{{
+
+nnoremap <leader>ft :setfiletype text<cr>
+nnoremap <leader>fh :setfiletype help<cr>
 
 " ====================================================================== }}}
 " ######################################################################
