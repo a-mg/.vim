@@ -20,3 +20,7 @@ nnoremap <silent> <leader>i :call LeximaDisableWhileInsert()<cr>i
 call lexima#add_rule({'char': ':', 'input_after': ';', 'filetype': 'css'})
 call lexima#add_rule({'char': ';', 'at': '\%#\;', 'leave': 1, 'filetype': 'css'})
 call lexima#add_rule({'char': '<BS>', 'at': '\:\%#\;', 'delete': 1, 'filetype': 'css'})
+
+" Match {% ... %} in liquid (jekyll)
+call lexima#add_rule({'char': '%', 'input_after': '%', 'filetype': 'liquid'})
+call lexima#add_rule({'char': '<space>', 'at': '%\%#%', 'input_after': '<space>', 'filetype': 'liquid'})
