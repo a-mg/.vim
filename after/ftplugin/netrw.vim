@@ -5,5 +5,4 @@ if g:netrw_list_hide !~ list_hide_append
 endif
 
 " Allow using escape mappings to exit netrw
-nnoremap <buffer> <esc>     <c-^>
-nnoremap <buffer> <s-space> <c-^>
+nnoremap <buffer> <esc> <c-^>
