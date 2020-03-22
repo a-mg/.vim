@@ -110,19 +110,6 @@ set numberwidth=6
 " Default to relative line numbering
 set relativenumber
 
-" Toggle relative and absolute numbering
-function! ToggleNumber()
-  if &relativenumber
-    set norelativenumber
-    set number
-  else
-    set relativenumber
-    set nonumber
-  endif
-endfunction
-
-nnoremap <c-r> :call ToggleNumber()<cr>
-
 " ====================================================================== }}}
 " Cursors ============================================================== {{{
 
