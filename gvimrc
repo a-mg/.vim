@@ -12,3 +12,11 @@ colorscheme pencil
 " statusline (change for colorschemes)
 hi link MySLPath WildMenu
 hi link MySLMod  CursorLineNr
+
+" enable mapping meta/option, except when inserting
+set macmeta
+augroup MacMeta
+  au!
+  au InsertEnter * set nomacmeta
+  au InsertLeave * set macmeta
+augroup END
