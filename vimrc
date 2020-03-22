@@ -75,25 +75,6 @@ set viminfo+=n~/.vim/local/info/viminfo
 let g:netrw_home = expand('~/.vim/local/netrw')
 
 " ====================================================================== }}}
-" Editing config ======================================================= {{{
-
-" Open config files in right split
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-
-" Open a right split with ~/.vim in netrw
-nnoremap <leader>ee :Vexplore! ~/.vim<cr>
-
-" Globally reload vimrc settings
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
-" Globally reload vimrc settings after closing the buffer
-" (when editing is complete)
-augroup EditingVimrc
-  au!
-  au BufWinLeave vimrc source $MYVIMRC
-augroup end
-
-" ====================================================================== }}}
 " ######################################################################
 
 " EDITING ENVIRONMENT ##################################################
