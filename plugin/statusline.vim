@@ -1,32 +1,32 @@
-set laststatus=2                                " always show statusline
+set laststatus=2                               " always show statusline
 
 let statusline_on   = ""
 let statusline_on  .= "%#MySLPath#"
-let statusline_on  .= " %f "                    " path (relative to pwd)
+let statusline_on  .= " %f "                   " path (relative to pwd)
 let statusline_on  .= "%#StatusLine#"
 let statusline_on  .= " "
 let statusline_on  .= "%#MySLMod#"
-let statusline_on  .= "%m"                      " modified
+let statusline_on  .= "%m"                     " modified
 let statusline_on  .= "%#StatusLine#"
-let statusline_on  .= "%{Git()}"                " git status
-let statusline_on  .= "%="                      " right align
-let statusline_on  .= "%y"                      " filetype
-let statusline_on  .= "%{Enc()}"                " encoding
+let statusline_on  .= "%{Git()}"               " git status
+let statusline_on  .= "%="                     " right align
+let statusline_on  .= "%y"                     " filetype
+let statusline_on  .= "%{Enc()}"               " encoding
 let statusline_on  .= " "
-let statusline_on  .= "%12("                    " ruler group:
-let statusline_on  .= "%c:"                     " current column
-let statusline_on  .= "%l/"                     " current line
-let statusline_on  .= "%L"                      " total lines
+let statusline_on  .= "%12("                   " ruler group:
+let statusline_on  .= "%c:"                    " current column
+let statusline_on  .= "%l/"                    " current line
+let statusline_on  .= "%L"                     " total lines
 let statusline_on  .= "%)"
 let statusline_on  .= " "
 
 let statusline_off  = " "
-let statusline_off .= "%f"                      " path (relative to pwd)
-let statusline_off .= "%m"                      " modified
+let statusline_off .= "%f"                     " path (relative to pwd)
+let statusline_off .= "%m"                     " modified
 
 let statusline_ui   = ""
 let statusline_ui  .= "%#MySLPath#"
-let statusline_ui  .= " %y "                    " filetype
+let statusline_ui  .= " %y "                   " filetype
 let statusline_ui  .= "%#StatusLine#"
 
 
