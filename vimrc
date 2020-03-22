@@ -222,9 +222,6 @@ inoremap <s-cr> <esc>o
 " Delete character to right of cursor
 inoremap <s-bs> <esc>lcl
 
-" Clear trailing whitespace
-nnoremap <leader>tw :%s/\s\+$//<cr>:noh<cr>
-
 " ====================================================================== }}}
 " Indentation ========================================================== {{{
 
