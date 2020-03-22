@@ -249,12 +249,6 @@ vnoremap gY y$
 nnoremap <leader>du yyp
 vnoremap <leader>du y`]p
 
-" Duplicate a line or region, commenting the original
-" (mappings require vim-commentary plugin)
-" This should maybe move to a plugin config file someday
-nmap <leader>dc yygccp
-vmap <leader>dc ygvgc`]p
-
 " Select the last pasted/changed text
 nnoremap <leader>v `[v`]
 
