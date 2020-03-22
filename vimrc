@@ -200,10 +200,6 @@ nnoremap g0 0
 noremap H g^
 noremap L g$
 
-" Use tab to jump between matching braces
-nnoremap <tab> %
-vnoremap <tab> %
-
 " ====================================================================== }}}
 " Searching ============================================================ {{{
 
