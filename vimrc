@@ -231,15 +231,6 @@ inoremap <s-bs> <esc>lcl
 nnoremap <leader>tw :%s/\s\+$//<cr>:noh<cr>
 
 " ====================================================================== }}}
-" Moving =============================================================== {{{
-
-" Move lines using leader-j,k
-nnoremap <leader>j :m+<cr>==
-nnoremap <leader>k :m-2<cr>==
-vnoremap <leader>j :m'>+<cr>gv=gv
-vnoremap <leader>k :m-2<cr>gv=gv
-
-" ====================================================================== }}}
 " Indentation ========================================================== {{{
 
 " Enable indentation
