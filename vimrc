@@ -38,12 +38,6 @@ nnoremap U <c-r>
 " Write file
 nnoremap s :w<cr>
 
-" Remove arrow keys in normal mode (corrective)
-noremap <left>  <nop>
-noremap <right> <nop>
-noremap <up>    <nop>
-noremap <down>  <nop>
-
 " ====================================================================== }}}
 " Local files ========================================================== {{{
 
