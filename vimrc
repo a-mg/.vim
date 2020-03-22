@@ -287,7 +287,7 @@ nnoremap Q gqip
 vnoremap Q gq
 
 " Wrap an entire file
-nnoremap <leader>q m`gggqG``
+nnoremap <leader>q mzgggqG`z
 
 " ====================================================================== }}}
 " ######################################################################
