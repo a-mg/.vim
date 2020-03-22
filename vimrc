@@ -97,32 +97,6 @@ augroup end
 " ######################################################################
 
 " EDITING ENVIRONMENT ##################################################
-" Fonts and colors ===================================================== {{{
-
-if has("gui_running")
-
-  " Hide the toolbar
-  set guioptions-=T
-
-  " Hide the left scrollbar
-  set guioptions=r
-
-  " Set font
-  set guifont=Rec\ Mono\ Linear\ Static:h14
-
-  " Increase leading
-  set linespace=4
-
-  " Enable syntax coloring
-  syntax enable
-
-  " Set the colorscheme
-  set background=light
-  colorscheme pencil
-
-endif
-
-" ====================================================================== }}}
 " Split windows ======================================================== {{{
 
 " Open vertical splits to the right by default

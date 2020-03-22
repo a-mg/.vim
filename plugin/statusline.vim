@@ -49,9 +49,6 @@ endfunction
 
 
 
-hi link MySLPath WildMenu
-hi link MySLMod  CursorLineNr
-
 let s:ignore = ["fugitive", "netrw"]
 
 augroup Statusline
