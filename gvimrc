@@ -10,8 +10,8 @@ set background=light
 colorscheme pencil
 
 " statusline (change for colorschemes)
-hi link MySLPath WildMenu
-hi link MySLMod  CursorLineNr
+hi link StatusLinePath     WildMenu
+hi link StatusLineModified CursorLineNr
 
 " enable mapping meta/option, except when inserting
 set macmeta
