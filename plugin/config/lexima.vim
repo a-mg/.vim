@@ -1,26 +1,28 @@
-" Insert with Lexima disabled until leaving insert mode
-function LeximaDisableWhileInsert()
-  let b:lexima_disabled = 1
-  augroup LeximaEnable
-    au!
-    au InsertLeave <buffer> call LeximaEnable()
-  augroup END
-endfunction
+let g:lexima_no_default_rules = 1
 
-function LeximaEnable()
-  let b:lexima_disabled = 0
-  augroup LeximaEnable
-    au!
-  augroup END
-endfunction
+" " Insert with Lexima disabled until leaving insert mode
+" function LeximaDisableWhileInsert()
+"   let b:lexima_disabled = 1
+"   augroup LeximaEnable
+"     au!
+"     au InsertLeave <buffer> call LeximaEnable()
+"   augroup END
+" endfunction
 
-nnoremap <silent> <leader>i :call LeximaDisableWhileInsert()<cr>i
+" function LeximaEnable()
+"   let b:lexima_disabled = 0
+"   augroup LeximaEnable
+"     au!
+"   augroup END
+" endfunction
 
-" Match : with ; when writing CSS
-call lexima#add_rule({'char': ':', 'input_after': ';', 'filetype': 'css'})
-call lexima#add_rule({'char': ';', 'at': '\%#\;', 'leave': 1, 'filetype': 'css'})
-call lexima#add_rule({'char': '<BS>', 'at': '\:\%#\;', 'delete': 1, 'filetype': 'css'})
+" nnoremap <silent> <leader>i :call LeximaDisableWhileInsert()<cr>i
 
-" Match {% ... %} in liquid (jekyll)
-call lexima#add_rule({'char': '%', 'input_after': '%', 'filetype': 'liquid'})
-call lexima#add_rule({'char': '<space>', 'at': '%\%#%', 'input_after': '<space>', 'filetype': 'liquid'})
+" " Match : with ; when writing CSS
+" call lexima#add_rule({'char': ':', 'input_after': ';', 'filetype': 'css'})
+" call lexima#add_rule({'char': ';', 'at': '\%#\;', 'leave': 1, 'filetype': 'css'})
+" call lexima#add_rule({'char': '<BS>', 'at': '\:\%#\;', 'delete': 1, 'filetype': 'css'})
+
+" " Match {% ... %} in liquid (jekyll)
+" call lexima#add_rule({'char': '%', 'input_after': '%', 'filetype': 'liquid'})
+" call lexima#add_rule({'char': '<space>', 'at': '%\%#%', 'input_after': '<space>', 'filetype': 'liquid'})
