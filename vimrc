@@ -121,20 +121,6 @@ augroup cursorline
     au WinEnter * set cursorline
 augroup END
 
-" Set width of color column
-let g:mycolorcolumn=80
-
-" Toggle an indicator of the wrapping column
-function! ToggleColorColumn()
-  if &colorcolumn
-    set colorcolumn=
-  else
-    let &colorcolumn=g:mycolorcolumn
-  end
-endfunction
-
-nnoremap <c-q> :call ToggleColorColumn()<cr>
-
 " Put a buffer between the cursor and the vertical edges
 set scrolloff=1
 
