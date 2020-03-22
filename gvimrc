@@ -20,3 +20,6 @@ augroup MacMeta
   au InsertEnter * set nomacmeta
   au InsertLeave * set macmeta
 augroup END
+
+" maximize window
+nnoremap <m-m> :set columns=1000<cr>:set lines=1000<cr>
