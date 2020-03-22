@@ -1,31 +1,3 @@
-" vimrc ================================================================ {{{
-" ----------------------------------------------------------------------
-" ----------888--888---888---88888b.d88b.----888d888--.d8888b-----------
-" ----------888--888---888---888-'888-'88b---888P'---d88P'--------------
-" ----------Y88--88P---888---888--888--888---888-----888----------------
-" -----------Y8bd8P----888---888--888--888---888-----Y88b.--------------
-" ------------Y88P-----888---888--888--888---888------'Y8888P-----------
-" ----------------------------------------------------------------------
-"
-" Author: A. Mattson Gallagher <amg@a-m-g.org>
-" Source: https://github.com/a-mg/dotvim
-"
-" This file contains settings and configuration for the vim editor.
-" Only core settings and mappings are included here; any settings
-" related to plugins or languages live in other files.
-"
-" The settings are grouped into sections based on which aspects of
-" the editor they modify. All settings should be commented. Commands
-" should mostly follow this rule: leader commands affect text, and
-" chord commands affect the editor/windows.
-"
-" References and reading:
-" http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-" https://hg.stevelosh.com/dotfiles/file/tip/vim/vimrc
-" https://github.com/emilyst/home
-"
-" ====================================================================== }}}
-
 " SYSTEM ###############################################################
 " Preamble ============================================================= {{{
 
