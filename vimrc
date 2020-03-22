@@ -218,11 +218,6 @@ vnoremap <space> za
 " EDITING TEXT #########################################################
 " Inserting ============================================================ {{{
 
-" Insert a blank line below and exit editing
-" expansion: m`1o<esc>``
-nnoremap <expr> <leader>o 'm`' . v:count1 . 'o<esc>``'
-nnoremap <expr> <leader>O 'm`' . v:count1 . 'O<esc>``'
-
 " Insert <cr> skipping rest of line
 inoremap <s-cr> <esc>o
 
