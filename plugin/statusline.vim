@@ -26,7 +26,7 @@ let statusline_off .= "%m"                      " modified
 
 let statusline_ui   = ""
 let statusline_ui  .= "%#MySLPath#"
-let statusline_ui  .= "%y"                      " filetype
+let statusline_ui  .= " %y "                    " filetype
 let statusline_ui  .= "%#StatusLine#"
 
 
@@ -50,7 +50,6 @@ endfunction
 
 
 let s:ignore = ["fugitive", "netrw"]
-
 augroup Statusline
   au!
   au WinEnter,BufEnter * 
