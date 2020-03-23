@@ -10,10 +10,6 @@ set linespace=4
 set background=light
 colorscheme pencil
 
-" statusline (change for colorschemes)
-hi link StatusLinePath     WildMenu
-hi link StatusLineModified CursorLineNr
-
 " enable mapping meta/option, except when inserting
 set macmeta
 augroup MacMeta
