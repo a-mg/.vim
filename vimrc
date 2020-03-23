@@ -92,22 +92,6 @@ vnoremap > >gv
 " ====================================================================== }}}
 " Clipboard ============================================================ {{{
 
-" Paste from system clipboard
-nnoremap P "*p
-vnoremap P "*p
-
-" Yank to system clipboard
-nnoremap Y "*y
-vnoremap Y "*y
-nnoremap YY "*yy
-
-" Restore default behaviors under g
-nnoremap gP P
-nnoremap gY y$
-vnoremap gY y$
-
-" Select the last pasted/changed text
-nnoremap <leader>v `[v`]
 
 " ====================================================================== }}}
 " Wrapping ============================================================= {{{
