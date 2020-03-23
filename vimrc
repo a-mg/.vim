@@ -147,41 +147,6 @@ vnoremap / /\v
 nnoremap <silent> <leader>/ :noh<cr>
 
 " ====================================================================== }}}
-" Folding ============================================================== {{{
-
-" Enable code folding
-set foldenable
-
-" Don't autofold
-set foldlevelstart=99
-set foldlevel=99
-
-" Folding method
-set foldmethod=syntax
-
-" Folding function
-function! MyFoldText()
-  let line = getline(v:foldstart)
-
-  let nucolwidth = &fdc + (&relativenumber + &number) * &numberwidth
-  let windowwidth = winwidth(0) - nucolwidth - 3
-  let foldedlinecount = v:foldend - v:foldstart
-
-  " expand tabs into spaces
-  let onetab = strpart(' ', 0, &tabstop)
-  let line = substitute(line, '\t', onetab, 'g')
-
-  let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
-  let fillcharcount = windowwidth - len(line) - len(foldedlinecount)
-  return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
-endfunction
-set foldtext=MyFoldText()
-
-" Use space to toggle folds
-nnoremap <space> za
-vnoremap <space> za
-
-" ====================================================================== }}}
 " ######################################################################
 
 " EDITING TEXT #########################################################
