@@ -1,6 +1,7 @@
 " statusline
-hi link StatusLinePath     WildMenu
-hi link StatusLineModified CursorLineNr
+hi link StatusLinePath        WildMenu
+hi link StatusLineOnModified  Todo
+hi link StatusLineOffModified CursorLineNr
 
 " gitgutter signs
 hi link GitGutterAdd          GitGutterAddDefault

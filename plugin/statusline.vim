@@ -5,15 +5,14 @@ set laststatus=2                               " always show statusline
 let statusline_on   = ""
 let statusline_on  .= "%#StatusLinePath#"
 let statusline_on  .= " %f "                   " path (relative to pwd)
+let statusline_on  .= "%#StatusLineOnModified#"
+let statusline_on  .= "%{SLMod()}"             " modified
 let statusline_on  .= "%#StatusLine#"
 let statusline_on  .= " "
-let statusline_on  .= "%#StatusLineModified#"
-let statusline_on  .= "%m"                     " modified
-let statusline_on  .= "%#StatusLine#"
-let statusline_on  .= "%{Git()}"               " git status
+let statusline_on  .= "%{SLGit()}"             " git status
 let statusline_on  .= "%="                     " right align
 let statusline_on  .= "%y"                     " filetype
-let statusline_on  .= "%{Enc()}"               " encoding
+let statusline_on  .= "%{SLEnc()}"             " encoding
 let statusline_on  .= " "
 let statusline_on  .= "%12("                   " ruler group:
 let statusline_on  .= "%c:"                    " current column
@@ -24,8 +23,8 @@ let statusline_on  .= " "
 
 let statusline_off  = " "
 let statusline_off .= "%f"                     " path (relative to pwd)
-let statusline_off .= "%#StatusLineModified#"
-let statusline_off .= " %m"                    " modified
+let statusline_off .= "%#StatusLineOffModified#"
+let statusline_off .= "%{SLMod()}"             " modified
 let statusline_off .= "%#StatusLine#"
 
 let statusline_ui   = ""
@@ -35,11 +34,11 @@ let statusline_ui  .= "%#StatusLine#"
 
 
 
-function! Enc() abort
+function! SLEnc() abort
   return "[" . (&fileencoding ? &fileencoding : &encoding) . "]"
 endfunction
 
-function! Git() abort
+function! SLGit() abort
   let l:branch = FugitiveStatusline()
   if l:branch ==? ""
     return ""
@@ -48,6 +47,14 @@ function! Git() abort
     let [a,m,r] = GitGutterGetHunkSummary()
     let l:git .= printf('[+%d,~%d,-%d]', a, m, r)
     return l:git
+  endif
+endfunction
+
+function! SLMod() abort
+  if &modified
+    return " * "
+  else
+    return ""
   endif
 endfunction
 
