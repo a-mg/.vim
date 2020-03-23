@@ -8,6 +8,7 @@ set encoding=utf-8                             " text encoding
 set visualbell                                 " don't beep
 set shortmess+=I                               " no intro page
 set updatetime=100                             " faster refresh (signs etc.)
+set autoread                                   " reload file when changed
 
 set undofile                                   " save undo history
 set backup                                     " enable backups
