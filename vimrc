@@ -81,9 +81,6 @@ nnoremap <c-n>j :rightbelow new<cr>
 nnoremap <c-n>k :leftabove new<cr>
 nnoremap <c-n>l :rightbelow vnew<cr>
 
-" Quickly open help files in right vsplit
-nnoremap ?? :vert bo help<space>
-
 " ====================================================================== }}}
 " Line numbering ======================================================= {{{
 
@@ -212,4 +209,3 @@ nnoremap <leader>qq mzgggqG`z
 " ====================================================================== }}}
 " ######################################################################
 
-" vim: set fdm=marker fdl=0 :
