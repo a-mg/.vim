@@ -1,11 +1,19 @@
-" set to textwidth
-nnoremap <leader>qw :setlocal colorcolumn+=+0<cr>
+" toggle a colorcolumn for a given col
+function! s:ToggleColumn(col) abort
+  if &colorcolumn !~? a:col
+    execute "setlocal colorcolumn+=" . a:col
+  else
+    execute "setlocal colorcolumn-=" . a:col
+  endif
+endfunction
 
-" add current column
-nnoremap <expr> <leader>qa ':setlocal colorcolumn+=' . col('.') . '<cr>'
 
-" remove current column
-nnoremap <expr> <leader>qd ':setlocal colorcolumn-=' . col('.') . '<cr>'
 
-" clear
-nnoremap <leader>qc :setlocal colorcolumn=<cr>
+" toggle at textwidth
+nnoremap <silent> <m-w> :call <SID>ToggleColumn("+0")<cr>
+
+" toggle current column
+nnoremap <silent> <m-a> :call <SID>ToggleColumn(col('.'))<cr>
+
+" clear all columns
+nnoremap <silent> <m-q> :setlocal colorcolumn=<cr>
