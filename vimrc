@@ -1,73 +1,90 @@
-" SYSTEM ###############################################################
-" Preamble ============================================================= {{{
+" basic settings
 
-" Remove vi compatibility
-set nocompatible
+set nocompatible                               " vim not vi
 
-" Enable filetype plugins
-filetype plugin on
+filetype plugin indent on                      " allow filetype plugins
 
-" Text encoding
-set encoding=utf-8
+set encoding=utf-8                             " text encoding
+set visualbell                                 " don't beep
+set shortmess+=I                               " no intro page
+set updatetime=100                             " faster refresh (signs etc.)
 
-" Show partial commands while typing
-set showcmd
-
-" Hide the current mode (used for status line replacement)
-set noshowmode
-
-" Don't beep constantly
-set visualbell
-
-" Disable the intro message
-set shortmess+=I
-
-" ====================================================================== }}}
-" Keybindings ========================================================== {{{
-
-" Use semicolon for commands
-noremap ; :
-
-" Leaders
-let mapleader = ","
-let maplocalleader = "\\"
-
-" More intuitive redo command
-nnoremap U <c-r>
-
-" Write file
-nnoremap s :w<cr>
-
-" ====================================================================== }}}
-" Local files ========================================================== {{{
-
-" Move undo files to vim directory
-set undodir=~/.vim/local/undo//
-
-" Enable backups
-set backup
-set backupdir=~/.vim/local/backup//
-
-" Swap files
-set noswapfile
-set directory=~/.vim/local/swap//
-
-" View files
-" Makes vim save state: folds, cursor, etc.
-set viewdir=~/.vim/local/view//
+set undofile                                   " save undo history
+set backup                                     " enable backups
+set noswapfile                                 " don't use swap files
 set viewoptions=folds,cursor
-
-" viminfo file
+set undodir=~/.vim/local/undo//
+set backupdir=~/.vim/local/backup//
+set directory=~/.vim/local/swap//
+set viewdir=~/.vim/local/view//
 set viminfo+=n~/.vim/local/info/viminfo
 
-" ====================================================================== }}}
-" ######################################################################
 
-" EDITING ENVIRONMENT ##################################################
-" Split windows ======================================================== {{{
 
-" Open vertical splits to the right by default
-set splitright
+" interface
+
+set wildmenu                                   " better ex completion
+
+set splitright                                 " open Vsplits on right
+
+set numberwidth=5                              " better margin
+set relativenumber                             " easier motion
+set signcolumn=yes                             " always show signs
+set scrolloff=1                                " cusorline margin
+
+set autoindent                                 " indent new lines
+set smartindent                                " indent new lines
+set smarttab                                   " tab = shiftwidth
+set tabstop=2                                  " tabs = two spaces
+set softtabstop=2                              " tabs = two spaces
+set shiftwidth=2                               " >> by 2
+set expandtab                                  " tabs = spaces
+
+set nowrap                                     " don't wrap by default
+set linebreak                                  " don't split words
+
+set ignorecase                                 " ignore case
+set smartcase                                  " ...unless includes CAPS
+set incsearch                                  " search while typing
+set hlsearch                                   " highlight matches
+set gdefault                                   " default to global replace
+
+
+
+" mappings
+" (many have moved to plugins)
+
+let mapleader      = ","
+let maplocalleader = "\\"
+
+noremap  ; :
+nnoremap U <c-r>
+nnoremap s :w<cr>
+
+" better regexps by default
+nnoremap / /\v
+vnoremap / /\v
+" clear highlighting
+nnoremap <silent> <leader>/ :noh<cr>
+
+" keep selection when indenting
+vnoremap < <gv
+vnoremap > >gv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 " Move between splits
 nnoremap <c-h> <c-w>h
@@ -81,25 +98,7 @@ nnoremap <c-n>j :rightbelow new<cr>
 nnoremap <c-n>k :leftabove new<cr>
 nnoremap <c-n>l :rightbelow vnew<cr>
 
-" ====================================================================== }}}
-" Line numbering ======================================================= {{{
 
-" Set width of number column
-set numberwidth=6
-
-" Default to relative line numbering
-set relativenumber
-
-" ====================================================================== }}}
-" Cursors ============================================================== {{{
-
-" Put a buffer between the cursor and the vertical edges
-set scrolloff=1
-
-" ====================================================================== }}}
-" ######################################################################
-
-" NAVIGATING TEXT ######################################################
 " Motion =============================================================== {{{
 
 " Move by screen lines, not file lines
@@ -119,53 +118,6 @@ nnoremap g0 0
 " Use capital motions to jump to start and end of line
 noremap H g^
 noremap L g$
-
-" ====================================================================== }}}
-" Searching ============================================================ {{{
-
-" Search case
-set ignorecase
-set smartcase
-
-" Highlight search terms
-set hlsearch
-
-" Search as you type
-set incsearch
-
-" Default to global replace
-set gdefault
-
-" Use better regular expressions
-nnoremap / /\v
-vnoremap / /\v
-
-" Clear the last search (clear highlighting)
-nnoremap <silent> <leader>/ :noh<cr>
-
-" ====================================================================== }}}
-" ######################################################################
-
-" EDITING TEXT #########################################################
-" Indentation ========================================================== {{{
-
-" Enable indentation
-filetype indent on
-
-" Use automatic indentation
-set autoindent
-set smartindent
-set smarttab
-
-" Tabs are two spaces
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-
-" Maintain selection when indenting
-vnoremap < <gv
-vnoremap > >gv
 
 " ====================================================================== }}}
 " Clipboard ============================================================ {{{
@@ -190,22 +142,9 @@ nnoremap <leader>v `[v`]
 " ====================================================================== }}}
 " Wrapping ============================================================= {{{
 
-" Wrap text in breaks (do not split words)
-set wrap linebreak
-
-" Default to not wrap text (for code)
-set nowrap
-
-" Do not hard wrap text (by default)
-set textwidth=0
-
 " Wrap a paragraph
 nnoremap Q gqip
 vnoremap Q gq
 
 " Wrap an entire file
 nnoremap <leader>qq mzgggqG`z
-
-" ====================================================================== }}}
-" ######################################################################
-
