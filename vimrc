@@ -60,9 +60,6 @@ set viewoptions=folds,cursor
 " viminfo file
 set viminfo+=n~/.vim/local/info/viminfo
 
-" .netrwhist history file
-let g:netrw_home = expand('~/.vim/local/netrw')
-
 " ====================================================================== }}}
 " ######################################################################
 
@@ -98,14 +95,6 @@ set relativenumber
 
 " ====================================================================== }}}
 " Cursors ============================================================== {{{
-
-" Only show the cursorline in the current window
-set cursorline
-augroup cursorline
-    au!
-    au WinLeave * set nocursorline
-    au WinEnter * set cursorline
-augroup END
 
 " Put a buffer between the cursor and the vertical edges
 set scrolloff=1
@@ -232,10 +221,6 @@ nnoremap YY "*yy
 nnoremap gP P
 nnoremap gY y$
 vnoremap gY y$
-
-" Duplicate a line or region of text
-nnoremap <leader>du yyp
-vnoremap <leader>du y`]p
 
 " Select the last pasted/changed text
 nnoremap <leader>v `[v`]
