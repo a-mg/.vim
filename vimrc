@@ -89,24 +89,6 @@ vnoremap > >gv
 
 " Motion =============================================================== {{{
 
-" Move by screen lines, not file lines
-nnoremap j gj
-nnoremap k gk
-nnoremap ^ g^
-nnoremap $ g$
-nnoremap 0 g0
-
-" Swap the original line motions to g- prefixed commands
-nnoremap gj j
-nnoremap gk k
-nnoremap g^ ^
-nnoremap g$ $
-nnoremap g0 0
-
-" Use capital motions to jump to start and end of line
-noremap H g^
-noremap L g$
-
 " ====================================================================== }}}
 " Clipboard ============================================================ {{{
 
