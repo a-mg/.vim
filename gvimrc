@@ -10,13 +10,5 @@ set linespace=4
 set background=light
 colorscheme pencil
 
-" enable mapping meta/option, except when inserting
-set macmeta
-augroup MacMeta
-  au!
-  au InsertEnter * set nomacmeta
-  au InsertLeave * set macmeta
-augroup END
-
 " maximize window
 nnoremap <m-m> :set columns=1000<cr>:set lines=1000<cr>
