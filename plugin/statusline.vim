@@ -39,14 +39,14 @@ function! SLEnc() abort
 endfunction
 
 function! SLGit() abort
-  let l:branch = FugitiveStatusline()
-  if l:branch ==? ""
+  let branch = FugitiveStatusline()
+  if branch ==? ""
     return ""
   else
-    let l:git = "[" . matchstr(l:branch, "(\\zs.*\\ze)") . "]"
-    let [a,m,r] = GitGutterGetHunkSummary()
-    let l:git .= printf('[+%d,~%d,-%d]', a, m, r)
-    return l:git
+    let git = "[" . matchstr(branch, "(\\zs.*\\ze)") . "]"
+    let [a, m, r] = GitGutterGetHunkSummary()
+    let git .= printf('[+%d,~%d,-%d]', a, m, r)
+    return git
   endif
 endfunction
 
