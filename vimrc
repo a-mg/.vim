@@ -86,18 +86,6 @@ vnoremap > >gv
 
 
 
-" Move between splits
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
-
-" Open new empty splits in the specified direction
-nnoremap <c-n>h :leftabove vnew<cr>
-nnoremap <c-n>j :rightbelow new<cr>
-nnoremap <c-n>k :leftabove new<cr>
-nnoremap <c-n>l :rightbelow vnew<cr>
-
 
 " Motion =============================================================== {{{
 

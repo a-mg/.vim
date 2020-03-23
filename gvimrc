@@ -9,6 +9,3 @@ set linespace=4
 
 set background=light
 colorscheme pencil
-
-" maximize window
-nnoremap <m-m> :set columns=1000<cr>:set lines=1000<cr>
