@@ -71,34 +71,9 @@ nnoremap <silent> <leader>/ :noh<cr>
 vnoremap < <gv
 vnoremap > >gv
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-" Motion =============================================================== {{{
-
-" ====================================================================== }}}
-" Clipboard ============================================================ {{{
-
-
-" ====================================================================== }}}
-" Wrapping ============================================================= {{{
-
-" Wrap a paragraph
+" wrap a paragraph
 nnoremap Q gqip
 vnoremap Q gq
 
-" Wrap an entire file
+" wrap an entire file
 nnoremap <leader>qq mzgggqG`z
