@@ -1,13 +1,13 @@
 " statusline
-hi link StatusLinePath        WildMenu
-hi link StatusLineOnModified  Todo
-hi link StatusLineOffModified CursorLineNr
+highlight link StatusLinePath        WildMenu
+highlight link StatusLineOnModified  Todo
+highlight link StatusLineOffModified CursorLineNr
 
 " gitgutter signs
-hi link GitGutterAdd          GitGutterAddDefault
-hi link GitGutterChange       GitGutterChangeDefault
-hi link GitGutterDelete       GitGutterDeleteDefault
-hi link GitGutterChangeDelete GitGutterDeleteDefault
+highlight link GitGutterAdd          GitGutterAddDefault
+highlight link GitGutterChange       GitGutterChangeDefault
+highlight link GitGutterDelete       GitGutterDeleteDefault
+highlight link GitGutterChangeDelete GitGutterDeleteDefault
 
 " trailing whitespace
 highlight link TrailingWhitespace Error
