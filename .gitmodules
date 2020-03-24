@@ -10,10 +10,6 @@
 [submodule "pack/default/start/racket"]
 	path = pack/default/start/racket
 	url = https://github.com/wlangstroth/vim-racket.git
-[submodule "pack/default/start/lexima.vim"]
-	path = pack/default/start/lexima
-	url = git@github.com:cohama/lexima.vim.git
-	ignore = untracked
 [submodule "pack/default/start/vim-easy-align"]
 	path = pack/default/start/easy-align
 	url = git@github.com:junegunn/vim-easy-align.git
