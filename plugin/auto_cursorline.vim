@@ -1,7 +1,7 @@
 " only show the cursorline in the active window
 set cursorline
-augroup cursorline
-    au!
-    au WinLeave * set nocursorline
-    au WinEnter * set cursorline
+augroup CursorLine
+    autocmd!
+    autocmd WinLeave * set nocursorline
+    autocmd WinEnter * set cursorline
 augroup END

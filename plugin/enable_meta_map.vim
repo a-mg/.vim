@@ -2,7 +2,7 @@
 " (see :help macmeta)
 set macmeta
 augroup MacMeta
-  au!
-  au InsertEnter * set nomacmeta
-  au InsertLeave * set macmeta
+  autocmd!
+  autocmd InsertEnter * set nomacmeta
+  autocmd InsertLeave * set macmeta
 augroup END

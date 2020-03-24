@@ -62,11 +62,11 @@ endfunction
 
 let s:ignore = ["fugitive", "netrw"]
 augroup Statusline
-  au!
-  au WinEnter,BufEnter * 
+  autocmd!
+  autocmd WinEnter,BufEnter *
         \ if index(s:ignore, &ft) < 0
         \ | setlocal statusline=%!statusline_on
         \ | endif
-  au WinLeave,BufLeave * setlocal statusline=%!statusline_off
-  au FileType netrw,fugitive setlocal statusline=%!statusline_ui
+  autocmd WinLeave,BufLeave * setlocal statusline=%!statusline_off
+  autocmd FileType netrw,fugitive setlocal statusline=%!statusline_ui
 augroup END
