@@ -8,3 +8,6 @@ hi link GitGutterAdd          GitGutterAddDefault
 hi link GitGutterChange       GitGutterChangeDefault
 hi link GitGutterDelete       GitGutterDeleteDefault
 hi link GitGutterChangeDelete GitGutterDeleteDefault
+
+" trailing whitespace
+highlight link TrailingWhitespace Error
