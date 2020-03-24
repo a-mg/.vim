@@ -15,9 +15,9 @@ let statusline_on  .= "%y"                     " filetype
 let statusline_on  .= "%{SLEnc()}"             " encoding
 let statusline_on  .= " "
 let statusline_on  .= "%12("                   " ruler group:
-let statusline_on  .= "%c:"                    " current column
-let statusline_on  .= "%l/"                    " current line
-let statusline_on  .= "%L"                     " total lines
+let statusline_on  .= "%l"                     " current line
+let statusline_on  .= "/%L"                    " total lines
+let statusline_on  .= ",%c"                    " current column
 let statusline_on  .= "%)"
 let statusline_on  .= " "
 
@@ -25,7 +25,7 @@ let statusline_off  = " "
 let statusline_off .= "%f"                     " path (relative to pwd)
 let statusline_off .= "%#StatusLineOffModified#"
 let statusline_off .= "%{SLMod()}"             " modified
-let statusline_off .= "%#StatusLine#"
+let statusline_off .= "%#StatusLineNC#"
 
 let statusline_ui   = ""
 let statusline_ui  .= "%#StatusLinePath#"
