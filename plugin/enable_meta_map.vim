@@ -1,8 +1,10 @@
 " enable mapping meta/option, except when inserting
 " (see :help macmeta)
-set macmeta
-augroup MacMeta
-  autocmd!
-  autocmd InsertEnter * set nomacmeta
-  autocmd InsertLeave * set macmeta
-augroup END
+if has("gui_macvim")
+  set macmeta
+  augroup MacMeta
+    autocmd!
+    autocmd InsertEnter * set nomacmeta
+    autocmd InsertLeave * set macmeta
+  augroup END
+endif
