@@ -9,8 +9,5 @@ highlight link GitGutterChange       GitGutterChangeDefault
 highlight link GitGutterDelete       GitGutterDeleteDefault
 highlight link GitGutterChangeDelete GitGutterDeleteDefault
 
-" trailing whitespace
-highlight link TrailingWhitespace Error
-
 " lighter comments
 highlight Comment guifg=#B2B2B2
