@@ -26,8 +26,3 @@ nmap cS <Plug>CSurround
 imap <c-s> <Plug>Isurround
 " insert block surround
 imap <c-s><c-s> <Plug>ISurround
-
-
-
-" insert mode shortcuts
-imap {<cr> <Plug>ISurround{
