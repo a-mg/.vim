@@ -31,3 +31,6 @@
 [submodule "pack/default/start/vim-endwise"]
 	path = pack/default/start/endwise
 	url = git@github.com:tpope/vim-endwise.git
+[submodule "pack/default/start/closer"]
+	path = pack/default/start/closer
+	url = git@github.com:rstacruz/vim-closer.git
