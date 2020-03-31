@@ -3,4 +3,4 @@
 inoremap <buffer><expr><silent> <c-]> '<esc>:normal! ' . (48 - col('.')) . 'a <esc>a" '
 
 " zip existing comment to match
-nnoremap <buffer><expr><silent> <c-]> (48 - col('.')) . 'i <esc>$'
+nnoremap <buffer><expr><silent> <c-]> (48 - col('.')) . 'i <esc>f"'
