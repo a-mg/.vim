@@ -11,6 +11,7 @@ let statusline_on  .= "%#StatusLine#"
 let statusline_on  .= " "
 let statusline_on  .= "%{SLGit()}"             " git status
 let statusline_on  .= "%="                     " right align
+let statusline_on  .= "%{SLCount()}"           " word count
 let statusline_on  .= "%y"                     " filetype
 let statusline_on  .= "%{SLEnc()}"             " encoding
 let statusline_on  .= " "
@@ -54,6 +55,25 @@ function! SLMod() abort
   if &modified
     return " * "
   else
+    return ""
+  endif
+endfunction
+
+function! SLCount() abort
+  if index(["text", "markdown"], &filetype) != -1
+    execute "silent normal g\<c-g>"
+    try
+      " calculate the word count
+      " (splitting the message for an empty buffer throws an error)
+      let word_count = split(v:statusmsg)[11]
+      let word_count = substitute(word_count, ";", "", "")
+    catch
+      " empty buffer
+      let word_count = 0
+    endtry
+    return "[" . word_count . " words" . "]"
+  else
+    " don't count words in code
     return ""
   endif
 endfunction
