@@ -2,7 +2,7 @@ syntax enable                                  " syntax highlighting
 set guioptions-=L                              " hide left scrollbar
 set mouse=a                                    " always allow mouse
 
-set guifont=Rec\ Mono\ Linear\ Static:h14      " ♥ Recursive
+set guifont=Rec\ Mono\ Linear:h14              " ♥ Recursive
 set linespace=4                                " increase leading
 
 
