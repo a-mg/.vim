@@ -34,6 +34,7 @@ set signcolumn=yes                             " always show signs
 set scrolloff=1                                " cusorline margin
 
 set nrformats-=octal                           " allow c-a/c-x on 0__
+set nrformats+=alpha                           " allow c-a/c-x on letters
 
 set autoindent                                 " indent new lines
 set smartindent                                " indent new lines
