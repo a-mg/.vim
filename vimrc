@@ -36,6 +36,8 @@ set scrolloff=1                                " cusorline margin
 set nrformats-=octal                           " allow c-a/c-x on 0__
 set nrformats+=alpha                           " allow c-a/c-x on letters
 
+set nostartofline                              " stay in col on vert move
+
 set autoindent                                 " indent new lines
 set smartindent                                " indent new lines
 set smarttab                                   " tab = shiftwidth
