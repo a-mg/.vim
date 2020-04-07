@@ -2,6 +2,7 @@ set noshowmode                                 " hide the mode
 set showcmd                                    " show partial commands
 set laststatus=2                               " always show statusline
 
+" active window statusline
 let statusline_on   = ""
 let statusline_on  .= "%#StatusLinePath#"
 let statusline_on  .= " %f "                   " path (relative to pwd)
@@ -22,12 +23,14 @@ let statusline_on  .= ",%c"                    " current column
 let statusline_on  .= "%)"
 let statusline_on  .= " "
 
+" inactive window statusline
 let statusline_off  = " "
 let statusline_off .= "%f"                     " path (relative to pwd)
 let statusline_off .= "%#StatusLineOffModified#"
 let statusline_off .= "%{SLMod()}"             " modified
 let statusline_off .= "%#StatusLineNC#"
 
+" not editing windows (fugitive etc.)
 let statusline_ui   = ""
 let statusline_ui  .= "%#StatusLinePath#"
 let statusline_ui  .= " %y "                   " filetype
@@ -70,13 +73,13 @@ endfunction
 
 
 
-let s:ignore = ["fugitive", "netrw"]
 augroup Statusline
   autocmd!
-  autocmd WinEnter,BufEnter *
-        \ if index(s:ignore, &ft) < 0
-        \ | setlocal statusline=%!statusline_on
-        \ | endif
+  autocmd WinEnter,BufEnter,FileType *
+        \  if index(["fugitive", "netrw", "help"], &ft) == -1
+        \|   setlocal statusline=%!statusline_on
+        \| else
+        \|   setlocal statusline=%!statusline_ui
+        \| endif
   autocmd WinLeave,BufLeave * setlocal statusline=%!statusline_off
-  autocmd FileType netrw,fugitive setlocal statusline=%!statusline_ui
 augroup END
