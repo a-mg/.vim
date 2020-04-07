@@ -61,17 +61,7 @@ endfunction
 
 function! SLCount() abort
   if index(["text", "markdown"], &filetype) != -1
-    execute "silent normal g\<c-g>"
-    try
-      " calculate the word count
-      " (splitting the message for an empty buffer throws an error)
-      let word_count = split(v:statusmsg)[11]
-      let word_count = substitute(word_count, ";", "", "")
-    catch
-      " empty buffer
-      let word_count = 0
-    endtry
-    return "[" . word_count . " words" . "]"
+    return "[" . wordcount().words . " words]"
   else
     " don't count words in code
     return ""
