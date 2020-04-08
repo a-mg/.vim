@@ -5,5 +5,5 @@ nnoremap <leader>ee :Vexplore! ~/.vim<cr>
 
 augroup VimrcEdit
   autocmd!
-  autocmd BufWritePost ~/.vim/*.vim,vimrc,gvimrc source %
+  autocmd BufWritePost ~/.vim/*.vim,vimrc,gvimrc nested source %
 augroup end
