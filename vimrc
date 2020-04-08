@@ -69,17 +69,17 @@ nnoremap s :w<cr>
 
 " better regexps by default
 nnoremap / /\v
-vnoremap / /\v
+xnoremap / /\v
 " clear highlighting
 nnoremap <silent> <leader>/ :noh<cr>
 
 " keep selection when indenting
-vnoremap < <gv
-vnoremap > >gv
+xnoremap < <gv
+xnoremap > >gv
 
 " wrap a paragraph
 nnoremap Q gqip
-vnoremap Q gq
+xnoremap Q gq
 
 " wrap an entire file
 nnoremap <leader>qq mzgggqG`z
