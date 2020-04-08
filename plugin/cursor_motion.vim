@@ -1,17 +1,17 @@
 " move by screen lines, not file lines
 " (fixes them for wrapped text)
-nnoremap j gj
-nnoremap k gk
-nnoremap ^ g^
-nnoremap $ g$
-nnoremap 0 g0
+noremap j gj
+noremap k gk
+noremap ^ g^
+noremap $ g$
+noremap 0 g0
 
 " preserve original motions under g
-nnoremap gj j
-nnoremap gk k
-nnoremap g^ ^
-nnoremap g$ $
-nnoremap g0 0
+noremap gj j
+noremap gk k
+noremap g^ ^
+noremap g$ $
+noremap g0 0
 
 
 
