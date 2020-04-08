@@ -15,3 +15,10 @@ nnoremap <m-:> :bo vnew<cr>
 
 " try to maximize the GUI window
 nnoremap <m-m> :set columns=1000<cr>:set lines=1000<cr>
+
+" open help/docs at the far right
+nnoremap <m-?> :vert bo help<space>
+
+" open vim config folder
+nnoremap <m-v> :Explore   ~/.vim<cr>
+nnoremap <m-V> :Vexplore! ~/.vim<cr>
