@@ -1,9 +1,9 @@
 " highlight trailing whitespace
-highlight link TrailingWhitespace Error
-augroup TrailingWhitespace
+highlight link TrailingWhiteSpace Error
+augroup TrailingWhiteSpace
   autocmd!
-  autocmd BufEnter    * match TrailingWhitespace /\s\+$/
-  autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
+  autocmd BufEnter    * match TrailingWhiteSpace /\s\+$/
+  autocmd InsertEnter * match TrailingWhiteSpace /\s\+\%#\@<!$/
   autocmd InsertLeave * match TrailingWhiteSpace /\s\+$/
 augroup END
 
