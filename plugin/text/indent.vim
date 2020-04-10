@@ -3,5 +3,5 @@ xnoremap < <gv
 xnoremap > >gv
 
 " completely unindent
-nnoremap g< mz0d^`z
-xnoremap g< mz:s/^\s\+//<cr>:noh<cr>`zgv
+nnoremap <leader>< mz0d^`z
+xnoremap <leader>< mz:s/^\s\+//<cr>:noh<cr>`zgv
