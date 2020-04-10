@@ -30,6 +30,7 @@ set splitright                                 " open Vsplits on right
 
 set numberwidth=5                              " better margin
 set relativenumber                             " easier motion
+set number                                     " current line abs. number
 set signcolumn=yes                             " always show signs
 set scrolloff=1                                " cusorline margin
 
