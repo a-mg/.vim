@@ -73,10 +73,6 @@ xnoremap / /\v
 " clear highlighting
 nnoremap <silent> <leader>/ :noh<cr>
 
-" keep selection when indenting
-xnoremap < <gv
-xnoremap > >gv
-
 " wrap a paragraph
 nnoremap Q gqip
 xnoremap Q gq
