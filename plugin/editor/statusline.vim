@@ -39,47 +39,47 @@ let statusline_ui  .= "%#StatusLine#"
 
 
 function! SLEnc() abort
-  return "[" . (&fileencoding ? &fileencoding : &encoding) . "]"
+    return "[" . (&fileencoding ? &fileencoding : &encoding) . "]"
 endfunction
 
 function! SLGit() abort
-  let branch = FugitiveStatusline()
-  if branch ==? ""
-    return ""
-  else
-    let git = "[" . matchstr(branch, "(\\zs.*\\ze)") . "]"
-    let [a, m, r] = GitGutterGetHunkSummary()
-    let git .= printf('[+%d,~%d,-%d]', a, m, r)
-    return git
-  endif
+    let branch = FugitiveStatusline()
+    if branch ==? ""
+        return ""
+    else
+        let git = "[" . matchstr(branch, "(\\zs.*\\ze)") . "]"
+        let [a, m, r] = GitGutterGetHunkSummary()
+        let git .= printf('[+%d,~%d,-%d]', a, m, r)
+        return git
+    endif
 endfunction
 
 function! SLMod() abort
-  if &modified
-    return " * "
-  else
-    return ""
-  endif
+    if &modified
+        return " * "
+    else
+        return ""
+    endif
 endfunction
 
 function! SLCount() abort
-  if index(["text", "markdown"], &filetype) != -1
-    return "[" . wordcount().words . " words]"
-  else
-    " don't count words in code
-    return ""
-  endif
+    if index(["text", "markdown"], &filetype) != -1
+        return "[" . wordcount().words . " words]"
+    else
+        " don't count words in code
+        return ""
+    endif
 endfunction
 
 
 
 augroup Statusline
-  autocmd!
-  autocmd WinEnter,BufEnter,FileType *
-        \  if index(["fugitive", "netrw", "help"], &ft) == -1
-        \|   setlocal statusline=%!statusline_on
-        \| else
-        \|   setlocal statusline=%!statusline_ui
-        \| endif
-  autocmd WinLeave,BufLeave * setlocal statusline=%!statusline_off
+    autocmd!
+    autocmd WinEnter,BufEnter,FileType *
+        \   if index(["fugitive", "netrw", "help"], &ft) == -1
+        \|      setlocal statusline=%!statusline_on
+        \|  else
+        \|      setlocal statusline=%!statusline_ui
+        \|  endif
+    autocmd WinLeave,BufLeave * setlocal statusline=%!statusline_off
 augroup END

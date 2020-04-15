@@ -39,13 +39,13 @@ set nrformats+=alpha                           " allow c-a/c-x on letters
 
 set nostartofline                              " stay in col on vert move
 
-set autoindent                                 " indent new lines
-set smartindent                                " indent new lines
+set autoindent                                 " copy indent to new lines
+set smartindent                                " autoindent lines
 set smarttab                                   " tab = shiftwidth
-set tabstop=2                                  " tabs = two spaces
-set softtabstop=2                              " tabs = two spaces
-set shiftwidth=2                               " >> by 2
-set expandtab                                  " tabs = spaces
+set tabstop=4                                  " tabs look like 4 spaces
+set softtabstop=4                              " indent by 4 spaces
+set shiftwidth=4                               " >> by 4
+set expandtab                                  " tabs are spaces
 
 set nowrap                                     " don't wrap by default
 set linebreak                                  " don't split words

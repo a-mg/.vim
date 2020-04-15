@@ -1,10 +1,10 @@
 " toggle a colorcolumn for a given col
 function! s:ToggleColumn(col) abort
-  if &colorcolumn !~? a:col
-    execute "setlocal colorcolumn+=" . a:col
-  else
-    execute "setlocal colorcolumn-=" . a:col
-  endif
+    if &colorcolumn !~? a:col
+        execute "setlocal colorcolumn+=" . a:col
+    else
+        execute "setlocal colorcolumn-=" . a:col
+    endif
 endfunction
 
 

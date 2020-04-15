@@ -24,14 +24,14 @@ noremap L g$
 " equivalent to the first/last line of the paragraph, or the line immediately
 " before the motion } or after {.
 function! s:Seek(dir, gv) abort
-  " restore selection in visual mode (calling a function clears it)
-  if a:gv
-    normal! gv
-  endif
-  " check the next line in the direction (1 = down, -1 = up) and move
-  while getline(line('.') + a:dir)[col('.') - 1] !=? ""
-    execute "normal! " . (a:dir == 1 ? "j" : "k")
-  endwhile
+    " restore selection in visual mode (calling a function clears it)
+    if a:gv
+        normal! gv
+    endif
+    " check the next line in the direction (1 = down, -1 = up) and move
+    while getline(line('.') + a:dir)[col('.') - 1] !=? ""
+        execute "normal! " . (a:dir == 1 ? "j" : "k")
+    endwhile
 endfunction
 
 nnoremap <silent> J :call      <SID>Seek( 1, 0)<cr>
