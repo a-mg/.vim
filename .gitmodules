@@ -34,3 +34,6 @@
 [submodule "pack/default/start/closer"]
 	path = pack/default/start/closer
 	url = git@github.com:rstacruz/vim-closer.git
+[submodule "pack/default/start/applescript"]
+	path = pack/default/start/applescript
+	url = git@github.com:dearrrfish/vim-applescript.git
