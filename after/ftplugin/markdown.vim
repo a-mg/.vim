@@ -11,3 +11,11 @@ inoremap <buffer> . .<c-g>u
 inoremap <buffer> ! !<c-g>u
 inoremap <buffer> ? ?<c-g>u
 inoremap <buffer> , ,<c-g>u
+
+let b:undo_ftplugin .=
+            \  "| setlocal wrap< textwidth< softtabstop< shiftwidth<"
+            \. "| setlocal spell< spelllang<"
+            \. "| iunmap <buffer> ."
+            \. "| iunmap <buffer> !"
+            \. "| iunmap <buffer> ?"
+            \. "| iunmap <buffer> ,"
