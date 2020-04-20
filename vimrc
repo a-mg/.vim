@@ -13,12 +13,9 @@ set autoread                                   " reload file when changed
 set undofile                                   " save undo history
 set backup                                     " enable backups
 set noswapfile                                 " don't use swap files
-set viewoptions=folds,cursor
-set undodir=~/.vim/local/undo//
-set backupdir=~/.vim/local/backup//
-set directory=~/.vim/local/swap//
-set viewdir=~/.vim/local/view//
-set viminfo+=n~/.vim/local/info/viminfo
+set undodir=~/.vim/cache/undo//
+set backupdir=~/.vim/cache/backup//
+set viminfo+=n~/.vim/cache/viminfo
 
 
 
