@@ -37,3 +37,6 @@
 [submodule "pack/default/start/applescript"]
 	path = pack/default/start/applescript
 	url = git@github.com:dearrrfish/vim-applescript.git
+[submodule "pack/default/start/slime"]
+	path = pack/default/start/slime
+	url = https://github.com/jpalardy/vim-slime
