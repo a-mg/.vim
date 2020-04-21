@@ -49,7 +49,7 @@ function! SLGit() abort
     else
         let git = "[" . matchstr(branch, "(\\zs.*\\ze)") . "]"
         let [a, m, r] = GitGutterGetHunkSummary()
-        let git .= printf('[+%d,~%d,-%d]', a, m, r)
+        let git .= printf("[+%d,~%d,-%d]", a, m, r)
         return git
     endif
 endfunction
