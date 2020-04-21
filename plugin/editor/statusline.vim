@@ -50,7 +50,7 @@ endfunction
 function! SetStatusLine(filetype, on_off) abort
     execute "setlocal statusline=%!"
                 \. "statusline_"
-                \. (index(["fugitive", "netrw", "help"], a:filetype) > -1
+                \. (index(["fugitive", "gitcommit", "netrw", "help"], a:filetype) > -1
                 \   || &buftype == "terminal"
                 \       ? "ui"
                 \       : "text")
