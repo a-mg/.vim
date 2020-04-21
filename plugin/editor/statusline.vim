@@ -2,84 +2,65 @@ set noshowmode                                 " hide the mode
 set showcmd                                    " show partial commands
 set laststatus=2                               " always show statusline
 
-" active window statusline
-let statusline_on   = ""
-let statusline_on  .= "%#StatusLinePath#"
-let statusline_on  .= " %f "                   " path (relative to pwd)
-let statusline_on  .= "%#StatusLineModified#"
-let statusline_on  .= "%{SLMod()}"             " modified
-let statusline_on  .= "%#StatusLine#"
-let statusline_on  .= " "
-let statusline_on  .= "%{SLGit()}"             " git status
-let statusline_on  .= "%="                     " right align
-let statusline_on  .= "%{SLCount()}"           " word count
-let statusline_on  .= "%y"                     " filetype
-let statusline_on  .= "%{SLEnc()}"             " encoding
-let statusline_on  .= " "
-let statusline_on  .= "%12("                   " ruler group:
-let statusline_on  .= "%l"                     " current line
-let statusline_on  .= "/%L"                    " total lines
-let statusline_on  .= ",%c"                    " current column
-let statusline_on  .= "%)"
-let statusline_on  .= " "
+let statusline_text =
+            \  "%#StatusLinePath# %f "
+            \. "%#StatusLineModified#"
+            \. "%{&modified ? ' * ' : ''}"
+            \. "%#StatusLine#  "
+            \. "%{SLGit()}  "
+            \. "%="
+            \. "%{SLCount()}"
+            \. "%{&filetype != '' ? &filetype . ' | ' : ''}"
+            \. "%{&fileencoding ? &fileencoding : &encoding} | "
+            \. "%{&expandtab ? '␣' . &shiftwidth : '→'}"
+            \. "%12(%l/%L,%c%) "
 
-" inactive window statusline
-let statusline_off  = " "
-let statusline_off .= "%f"                     " path (relative to pwd)
-let statusline_off .= "%#StatusLineNCModified#"
-let statusline_off .= "%{SLMod()}"             " modified
-let statusline_off .= "%#StatusLineNC#"
+let statusline_text_nc =
+            \  " %f "
+            \. "%#StatusLineNCModified#"
+            \. "%{&modified ? ' * ' : ''}"
+            \. "%#StatusLineNC"
 
-" not editing windows (fugitive etc.)
-let statusline_ui   = ""
-let statusline_ui  .= "%#StatusLinePath#"
-let statusline_ui  .= " %y "                   " filetype
-let statusline_ui  .= "%#StatusLine#"
+let statusline_ui =
+            \  "%#StatusLine#"
+            \. "%#StatusLinePath# %{&filetype != '' ? &filetype : &buftype} "
+            \. "%#StatusLine# %F"
+
+let statusline_ui_nc =
+            \  "%#StatusLineNC# %{&filetype != '' ? &filetype : &buftype}: %F"
 
 
-
-function! SLEnc() abort
-    return "[" . (&fileencoding ? &fileencoding : &encoding) . "]"
-endfunction
 
 function! SLGit() abort
-    let branch = FugitiveStatusline()
-    if branch ==? ""
-        return ""
-    else
-        let git = "[" . matchstr(branch, "(\\zs.*\\ze)") . "]"
-        let [a, m, r] = GitGutterGetHunkSummary()
-        let git .= printf("[+%d,~%d,-%d]", a, m, r)
-        return git
-    endif
-endfunction
-
-function! SLMod() abort
-    if &modified
-        return " * "
-    else
-        return ""
-    endif
+    let branch    = FugitiveStatusline()->matchstr("(\\zs.*\\ze)")
+    let [a, m, r] = GitGutterGetHunkSummary()
+    return (branch !=? "")
+                \? printf("%s: +%d,~%d,-%d", branch, a, m, r)
+                \: ""
 endfunction
 
 function! SLCount() abort
-    if index(["text", "markdown"], &filetype) != -1
-        return "[" . wordcount().words . " words]"
-    else
-        " don't count words in code
-        return ""
-    endif
+    return (index(["text", "markdown"], &filetype) != -1)
+                \? wordcount().words . " words | "
+                \: ""
 endfunction
 
 
 
+function! SetStatusLine(filetype, on_off) abort
+    execute "setlocal statusline=%!"
+                \. "statusline_"
+                \. (index(["fugitive", "netrw", "help"], a:filetype) > -1
+                \   || &buftype == "terminal"
+                \       ? "ui"
+                \       : "text")
+                \. (a:on_off == 0
+                \       ? "_nc"
+                \       : "")
+endfunction
+
 augroup Statusline
     autocmd!
-    autocmd WinEnter,BufEnter,FileType *
-        \   if index(["fugitive", "netrw", "help"], &ft) == -1
-        \|      setlocal statusline=%!statusline_on
-        \|  else
-        \|      setlocal statusline=%!statusline_ui
-        \|  endif
-    autocmd WinLeave,BufLeave * setlocal statusline=%!statusline_off
+    autocmd WinEnter,BufEnter,FileType,TerminalOpen * call SetStatusLine(&filetype, 1)
+    autocmd WinLeave,BufLeave                       * call SetStatusLine(&filetype, 0)
 augroup END
