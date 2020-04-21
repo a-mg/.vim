@@ -1,7 +1,7 @@
 " statusline
 highlight link StatusLinePath        WildMenu
-highlight link StatusLineOnModified  Todo
-highlight link StatusLineOffModified CursorLineNr
+highlight link StatusLineModified    Todo
+highlight link StatusLineNCModified  CursorLineNr
 
 " gitgutter signs
 highlight link GitGutterAdd          GitGutterAddDefault

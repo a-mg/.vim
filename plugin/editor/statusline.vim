@@ -6,7 +6,7 @@ set laststatus=2                               " always show statusline
 let statusline_on   = ""
 let statusline_on  .= "%#StatusLinePath#"
 let statusline_on  .= " %f "                   " path (relative to pwd)
-let statusline_on  .= "%#StatusLineOnModified#"
+let statusline_on  .= "%#StatusLineModified#"
 let statusline_on  .= "%{SLMod()}"             " modified
 let statusline_on  .= "%#StatusLine#"
 let statusline_on  .= " "
@@ -26,7 +26,7 @@ let statusline_on  .= " "
 " inactive window statusline
 let statusline_off  = " "
 let statusline_off .= "%f"                     " path (relative to pwd)
-let statusline_off .= "%#StatusLineOffModified#"
+let statusline_off .= "%#StatusLineNCModified#"
 let statusline_off .= "%{SLMod()}"             " modified
 let statusline_off .= "%#StatusLineNC#"
 
