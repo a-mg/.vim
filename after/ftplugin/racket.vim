@@ -4,8 +4,6 @@ setlocal shiftwidth=2
 setlocal commentstring=;;%s
 setlocal lispwords-=if
 
-let g:slime_vimterminal_cmd = "racket"
-
 " wlangstroth/vim-racket doesn't set b:undo_ftplugin, so we need to define it
 " explicitly, not append to it, for now (see pull request #53)
 let b:undo_ftplugin =
