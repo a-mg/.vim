@@ -6,9 +6,8 @@ setlocal lispwords-=if
 
 let g:slime_vimterminal_cmd = "racket"
 
-if !exists("b:undo_ftplugin")
-    let b:undo_ftplugin = ""
-endif
-let b:undo_ftplugin .=
-      \  "| setlocal softtabstop< shiftwidth<"
+" wlangstroth/vim-racket doesn't set b:undo_ftplugin, so we need to define it
+" explicitly, not append to it, for now (see pull request #53)
+let b:undo_ftplugin =
+      \  "setlocal softtabstop< shiftwidth<"
       \. " commentstring< lispwords<"
