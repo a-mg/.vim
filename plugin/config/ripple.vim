@@ -1,6 +1,5 @@
 let g:ripple_repls = {
             \ "racket": "racket",
-            \ "scheme": "racket -l sicp --repl",
             \ "ruby":   "irb",
             \ }
 
