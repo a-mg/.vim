@@ -37,3 +37,6 @@
 [submodule "pack/default/start/applescript"]
 	path = pack/default/start/applescript
 	url = git@github.com:dearrrfish/vim-applescript.git
+[submodule "pack/default/start/vim-ripple"]
+	path = pack/default/start/vim-ripple
+	url = git@github.com:urbainvaes/vim-ripple.git
