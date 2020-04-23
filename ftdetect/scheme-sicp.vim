@@ -2,4 +2,4 @@
 " Racket source file, but with some custom settings
 autocmd BufNewFile,BufRead */sicp/*.ss
             \  set filetype=racket
-            \| let g:ripple_repls["racket"] = "racket -l sicp --repl"
+            \| let b:ripple_repl = "racket -l sicp --repl"
