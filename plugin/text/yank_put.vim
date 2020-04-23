@@ -1,11 +1,11 @@
 " paste from system clipboard
-nnoremap P "*p
-xnoremap P "*p
+nnoremap P "+p
+xnoremap P "+p
 
 " yank to system clipboard
-nnoremap Y "*y
-xnoremap Y "*y
-nnoremap YY "*yy
+nnoremap Y "+y
+xnoremap Y "+y
+nnoremap YY "+yy
 
 " restore default behaviors under g
 nnoremap gP P
