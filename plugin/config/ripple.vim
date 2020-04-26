@@ -10,5 +10,5 @@ nmap <leader>r <Plug>(ripple_open_repl)
 nmap yr        <Plug>(ripple_send_motion)
 nmap yR        <Plug>(ripple_send_motion)ip
 nmap yr.       <Plug>(ripple_send_previous)
-xmap yr        <Plug>(ripple_send_selection)
+xmap R         <Plug>(ripple_send_selection)
 nmap yrr       <Plug>(ripple_send_line)
