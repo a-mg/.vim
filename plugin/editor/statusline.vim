@@ -16,6 +16,7 @@ let statusline_text =
             \.      ". (&filetype != '' ? &filetype . ' | ' : '')"
             \.      ". (&fileencoding ? &fileencoding : &encoding . ' | ')"
             \.      ". (&expandtab ? '␣' . &shiftwidth : '→')"
+            \.      ". (&textwidth ? ' | ←' . &textwidth . '→' : '')"
             \. ": ''}"
             \. "%12(%l/%L,%c%) "
 
