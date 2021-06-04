@@ -6,4 +6,4 @@
 " (settings/mappings which apply only in the Fugitive window)
 
 " push commits
-nnoremap <silent><buffer> SS :Git push<cr>
+nnoremap <silent><buffer> S :Git push<cr>
